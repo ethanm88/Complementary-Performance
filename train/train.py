@@ -1,4 +1,4 @@
-import preprocess
+import train.train.preprocess_covid as preprocess_covid
 from transformers import BertModel, AdamW, get_linear_schedule_with_warmup
 import torch.nn.functional as F
 import torch.nn as nn
@@ -93,7 +93,7 @@ def eval(smodel, tokenizer, test_dataset, test_text, bs = 1):
         print('Initial Difference:', initial_difference)
         try:
           while True:
-              neighbor_dataset, neighbor_text = preprocess.get_local_neighbors(current_text, batch['labels'], tokenizer)
+              neighbor_dataset, neighbor_text = preprocess_covid.get_local_neighbors(current_text, batch['labels'], tokenizer)
               neighbor_dataloader = DataLoader(neighbor_dataset, batch_size=bs)
               found_new = False
               for inner_batch_idx, inner_batch in enumerate(neighbor_dataloader):
@@ -126,7 +126,7 @@ def train(lr=1e-6, bs = 4, num_epochs = 400, warmup_ratio = 0.1, from_save=True)
     saliency_markers = ['<in_sal>', '<out_sal>', '<cp>']
     tokenizer = AutoTokenizer.from_pretrained("digitalepidemiologylab/covid-twitter-bert-v2")
     tokenizer.add_tokens(saliency_markers)
-    train_dataset, test_dataset, test_text = preprocess.create_data_instances(tokenizer)
+    train_dataset, test_dataset, test_text = preprocess_covid.create_data_instances(tokenizer)
     train_loader = DataLoader(train_dataset, batch_size=bs, shuffle=True)
 
     if from_save:
