@@ -1,4 +1,4 @@
-import train.train.preprocess_covid as preprocess_covid
+import preprocess_covid as preprocess_covid
 from transformers import BertModel, AdamW, get_linear_schedule_with_warmup
 import torch.nn.functional as F
 import torch.nn as nn

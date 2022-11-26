@@ -116,26 +116,49 @@ def aggregate_samples(tweet_df):
 
 def create_data_instances(tokenizer):
     tweet_df = pd.read_csv("../examples.csv")
-    # create accuracy values
-    tweet_df['correctness'] = np.where(tweet_df['y'] == tweet_df['choice'], 1, 0)
-    avg_dict = {}
-    for header in tweet_df.columns:
-        avg_dict[header] = []
-    avg_dict["percent_correct"] = []
-    for id in tweet_df['testid'].unique():
-        row = tweet_df.loc[tweet_df['testid'] == id].iloc[[0]]
-        for header in tweet_df.columns:
-            avg_dict[header].append(row.loc[list(row.index.values)[0], header])
-        current_mean = tweet_df.loc[tweet_df['testid'] == id, 'correctness'].mean()
-        avg_dict["percent_correct"].append(current_mean)
-    return
-    #print(tweet_df[['gold_annotation','annotation','correctness']])
-    labels = tweet_df[['correctness', 'testid']]
+    # aggregate samples accross annotators and calculate per-sample accuracy
+    tweet_df = aggregate_samples(tweet_df)
     
-    data = tweet_df[['system', 'testid']]
-    train_ids, test_ids = train_test_split(tweet_df['testid'].unique(), test_size = 0.2, random_state=8)
-    test_ids, val_ids = train_test_split(test_ids, test_size = 0.5, random_state=48)
+    # train/test/dev split
+    y_true = tweet_df['percent_correct']
+    data = tweet_df[['system', 'pred_y']]
+    train_data, test_data, train_y_true, test_y_true = train_test_split(data, y_true, test_size = 0.2, random_state=8)
+    test_data, val_data, test_y_true, val_y_true = train_test_split(test_data, test_y_true, test_size = 0.5, random_state=48)
 
+    train_text, test_text, val_text = train_data['system'].values.tolist(), test_data['system'].values.tolist(), val_data['system'].values.tolist()
+    train_y_true, test_y_true, val_y_true = train_y_true.values, test_y_true.values, val_y_true.values
+    train_pred_class, test_pred_class, val_pred_class = train_data['pred_y'].values.tolist(), test_data['pred_y'].values.tolist(), val_data['pred_y'].values.tolist()
+
+
+    # tokenize tweets
+    train_text = add_saliency_token(train_text, train_pred_class)
+    test_text = add_saliency_token(test_text, test_pred_class)
+    val_text = add_saliency_token(val_text, val_pred_class)
+
+    train_encodings = tokenizer(train_text, truncation=True, padding=True, max_length=256)
+    test_encodings = tokenizer(test_text, truncation=True, padding=True, max_length=256)
+    val_encodings = tokenizer(val_text, truncation=True, padding=True, max_length=256)
+
+    #train_encodings['input_ids'] = pad_input(train_encodings['input_ids'])
+    #test_encodings['input_ids'] = pad_input(test_encodings['input_ids'])
+
+    #train_encodings['token_type_ids'] = pad_input(train_encodings['token_type_ids'])
+    #test_encodings['token_type_ids'] = pad_input(test_encodings['token_type_ids'])
+
+    #train_encodings['attention_mask'] = pad_input(train_encodings['attention_mask'])
+    #test_encodings['attention_mask'] = pad_input(test_encodings['attention_mask'])
+
+    train_dataset = SaliencyDataset(train_encodings, train_y_true)
+    test_dataset = SaliencyDataset(test_encodings, test_y_true)
+    val_dataset = SaliencyDataset(val_encodings, val_y_true)
+
+    return train_dataset, test_dataset, val_dataset, test_text
+
+def pad_input(input_encodings, pad_val = 0, max_length = MAX_LENGTH):
+    return [(np.pad(seq, (0, 128 - len(seq)), 'constant', constant_values=(pad_val))).tolist() for seq in input_encodings]
+
+
+'''
     train_data, test_data, val_data = data[data['testid'].isin(train_ids)]['system'], data[data['testid'].isin(test_ids)]['system'], data[data['testid'].isin(val_ids)]['system']
 
     train_label, test_label, val_label = labels[labels['testid'].isin(train_ids)]['correctness'], labels[labels['testid'].isin(test_ids)]['correctness'], labels[labels['testid'].isin(val_ids)]['correctness']
@@ -160,31 +183,4 @@ def create_data_instances(tokenizer):
     val_text, val_label = list(val_text), list(val_label)
 
 
-
-    # tokenize tweets
-    train_text = add_saliency_token(train_text, train_label)
-    test_text = add_saliency_token(test_text, test_label)
-    val_text = add_saliency_token(val_text, val_label)
-
-    train_encodings = tokenizer(train_text, truncation=True, padding=True, max_length=256)
-    test_encodings = tokenizer(test_text, truncation=True, padding=True, max_length=256)
-    val_encodings = tokenizer(val_text, truncation=True, padding=True, max_length=256)
-
-    #train_encodings['input_ids'] = pad_input(train_encodings['input_ids'])
-    #test_encodings['input_ids'] = pad_input(test_encodings['input_ids'])
-
-    #train_encodings['token_type_ids'] = pad_input(train_encodings['token_type_ids'])
-    #test_encodings['token_type_ids'] = pad_input(test_encodings['token_type_ids'])
-
-    #train_encodings['attention_mask'] = pad_input(train_encodings['attention_mask'])
-    #test_encodings['attention_mask'] = pad_input(test_encodings['attention_mask'])
-
-    train_dataset = SaliencyDataset(train_encodings, train_label)
-    test_dataset = SaliencyDataset(test_encodings, test_label)
-    val_dataset = SaliencyDataset(val_encodings, val_label)
-
-    return train_dataset, test_dataset, val_dataset, test_text
-
-def pad_input(input_encodings, pad_val = 0, max_length = MAX_LENGTH):
-    return [(np.pad(seq, (0, 128 - len(seq)), 'constant', constant_values=(pad_val))).tolist() for seq in input_encodings]
-
+'''

@@ -1,4 +1,4 @@
-import preprocess_amzbook as preprocess_amzbook
+import preprocess_stance as preprocess_stance
 from transformers import BertModel, AdamW, get_linear_schedule_with_warmup
 import torch.nn.functional as F
 import torch.nn as nn
@@ -62,7 +62,7 @@ class SaliencyModel(nn.Module):
     cls_token = self.dropout(repr)
     logits = self.classifier(cls_token).reshape(batchsize)
     if labels is not None:
-      avg_loss = F.binary_cross_entropy(torch.sigmoid(logits), labels.float())
+      avg_loss = F.mse_loss(torch.sigmoid(logits), labels.float())
 
       return avg_loss, torch.sigmoid(logits)
     else:
@@ -93,7 +93,7 @@ def eval(smodel, tokenizer, test_dataset, test_text, bs = 1):
         print('Initial Difference:', initial_difference)
         try:
           while True:
-              neighbor_dataset, neighbor_text = preprocess_covid.get_local_neighbors(current_text, batch['labels'], tokenizer)
+              neighbor_dataset, neighbor_text = preprocess_stance.get_local_neighbors(current_text, batch['labels'], tokenizer)
               neighbor_dataloader = DataLoader(neighbor_dataset, batch_size=bs)
               found_new = False
               for inner_batch_idx, inner_batch in enumerate(neighbor_dataloader):
@@ -127,8 +127,7 @@ def train(lr=2e-7, bs = 8, num_epochs = 3, warmup_ratio = 0.1, from_save=False):
     saliency_markers = ['<in_sal>', '<out_sal>']
     tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
     tokenizer.add_tokens(saliency_markers)
-    train_dataset, test_dataset, val_dataset, test_text = preprocess_amzbook.create_data_instances(tokenizer)
-    return
+    train_dataset, test_dataset, val_dataset, test_text = preprocess_stance.create_data_instances(tokenizer)
     train_loader = DataLoader(train_dataset, batch_size=bs, shuffle=True)
     val_loader = DataLoader(val_dataset, batch_size=bs, shuffle=True)
 
@@ -192,27 +191,20 @@ def train(lr=2e-7, bs = 8, num_epochs = 3, warmup_ratio = 0.1, from_save=False):
         print("Average train loss: {}".format(avg_train_loss))
         
         smodel.eval()
-        val_correct = 0
-        num_1 = 0
+        y_hat = []
+        y_true = []
         for batch_idx, batch in enumerate(val_loader):
             input_ids = batch['input_ids'].to(device)
             attention_mask = batch['attention_mask'].to(device)
             labels = batch['labels'].to(device)
             e_span = batch['e_span'].to(device)
             outputs = smodel(input_ids, attention_mask=attention_mask, labels=labels, e_span=e_span)
-            #print((outputs[1].detach() == labels.detach()).float())
-            #print(torch.ceil(torch.nn.functional.relu(outputs[1].detach() - 0.5)), labels.detach())
-            #print()
-            num_1 += labels.detach().sum().item()
-            val_correct += (torch.ceil(torch.nn.functional.relu(outputs[1].detach() - 0.5)) == labels.detach()).float().sum().item()
-            count += bs
-        print(num_1)
-        print(len(val_dataset))
-        print(val_correct)
-        print("Val accuracy:", val_correct/len(val_dataset))
+            y_hat += outputs[1].detach().tolist()
+            y_true += labels.detach().tolist()
+        print('MSE on Validation:', F.mse_loss(torch.tensor(y_hat), torch.tensor(y_true)).item())
         smodel.train()
     smodel.encoder.save_pretrained("/srv/share5/emendes3/amzbook_saliency_model")
     return smodel, tokenizer, test_dataset, test_text
 if __name__ == "__main__":
     smodel, tokenizer, test_dataset, test_text = train()
-    #eval(smodel, tokenizer, test_dataset, test_text)
+    eval(smodel, tokenizer, test_dataset, test_text)
