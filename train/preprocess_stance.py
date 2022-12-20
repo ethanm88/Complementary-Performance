@@ -48,20 +48,25 @@ def reconstruct_text(input_ids, tokenizer):
     text = text.replace(" ##","")
     return text
 
-def get_local_neighbors(current_text, test_label, tokenizer, sal_token='<in_sal>', no_sal_token='<out_sal>'):
+def get_local_neighbors(current_text, test_label, tokenizer, sal_token='<in_sal>', no_sal_token='<out_sal>', max_n=5):
     word_list = current_text.split(' ')
     neighbors = []
-    for idx, word in enumerate(word_list):
-        new_word_list = None
-        if word == sal_token:
+    #print(word_list)
+    for n in range(1, max_n + 1):
+        for idx, word in enumerate(word_list):
+            if idx + 2 * n - 1 >= len(word_list):
+                break
             new_word_list = word_list.copy()
-            new_word_list[idx] = no_sal_token
-        elif word == no_sal_token:
-            new_word_list = word_list.copy()
-            new_word_list[idx] = sal_token
-        if new_word_list:
-            new_text = ' '.join([x for x in new_word_list if x!='[PAD]' and x!='[CLS]' and x!='[SEP]'])
-            neighbors.append(new_text)
+            replacement_token = None
+            if word == sal_token:
+                replacement_token = no_sal_token
+            elif word == no_sal_token:
+                replacement_token = sal_token
+            if replacement_token:
+                for i in range(idx, idx + n, 2):
+                    new_word_list[i] = replacement_token
+                new_text = ' '.join([x for x in new_word_list if x!='[PAD]' and x!='[CLS]' and x!='[SEP]'])
+                neighbors.append(new_text)
     #print('neighbors', neighbors)
     #neighbors = neighbors[0:5]
     test_encodings = tokenizer(neighbors, truncation=True, padding=True, max_length=128)
@@ -77,8 +82,8 @@ def add_saliency_token(tweets, predicted_class, sal_token='<in_sal>', no_sal_tok
         target_start_tag = "<span class=" + "class" + str(pred) + ">"
         other_start_tag = "<span class=" + "class" + str(abs(pred - 1)) + ">"
         end_tag = "</span>"
-        text = text.replace(target_start_tag, sal_token + " ")
-        text = text.replace(other_start_tag, no_sal_token  + " ")
+        text = text.replace(target_start_tag, " " + sal_token + " ")
+        text = text.replace(other_start_tag, " " + no_sal_token  + " ")
         text = text.replace(end_tag, "")
         text = text.replace("\"", "")
         word_list = []
@@ -122,13 +127,14 @@ def create_data_instances(tokenizer):
     # train/test/dev split
     y_true = tweet_df['percent_correct']
     data = tweet_df[['system', 'pred_y']]
-    train_data, test_data, train_y_true, test_y_true = train_test_split(data, y_true, test_size = 0.2, random_state=8)
-    test_data, val_data, test_y_true, val_y_true = train_test_split(test_data, test_y_true, test_size = 0.5, random_state=48)
+    train_data, test_data, train_y_true, test_y_true = train_test_split(data, y_true, test_size = 0.3, random_state=16)
+    test_data, val_data, test_y_true, val_y_true = train_test_split(test_data, test_y_true, test_size = 0.5, random_state=16)
+    print("Mean_score", train_y_true.mean())
 
     train_text, test_text, val_text = train_data['system'].values.tolist(), test_data['system'].values.tolist(), val_data['system'].values.tolist()
     train_y_true, test_y_true, val_y_true = train_y_true.values, test_y_true.values, val_y_true.values
     train_pred_class, test_pred_class, val_pred_class = train_data['pred_y'].values.tolist(), test_data['pred_y'].values.tolist(), val_data['pred_y'].values.tolist()
-
+    
 
     # tokenize tweets
     train_text = add_saliency_token(train_text, train_pred_class)

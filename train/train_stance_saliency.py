@@ -62,11 +62,11 @@ class SaliencyModel(nn.Module):
     cls_token = self.dropout(repr)
     logits = self.classifier(cls_token).reshape(batchsize)
     if labels is not None:
-      avg_loss = F.mse_loss(torch.sigmoid(logits), labels.float())
+      avg_loss = F.mse_loss(logits, labels.float())
 
-      return avg_loss, torch.sigmoid(logits)
+      return avg_loss, logits
     else:
-      return torch.sigmoid(logits)
+      return logits
 
 def eval(smodel, tokenizer, test_dataset, test_text, bs = 1):
     smodel.eval()
@@ -81,7 +81,6 @@ def eval(smodel, tokenizer, test_dataset, test_text, bs = 1):
         attention_mask = batch['attention_mask'].to(device)
         labels = batch['labels'].to(device)
         e_span = batch['e_span'].to(device)
-
         outputs = smodel(input_ids, attention_mask=attention_mask, labels=labels, e_span=e_span)
         difference = abs(1 - outputs[1].detach().item())
 
@@ -163,6 +162,7 @@ def train(lr=2e-7, bs = 8, num_epochs = 3, warmup_ratio = 0.1, from_save=False):
     best_f1 = 0
     best_model = None
     accum_iter = 2 # gradient accumulation
+    final_mse = 0
     for epoch in range(num_epochs):
         print("Epoch: ", epoch, end="  ")
         smodel.train()
@@ -199,12 +199,47 @@ def train(lr=2e-7, bs = 8, num_epochs = 3, warmup_ratio = 0.1, from_save=False):
             labels = batch['labels'].to(device)
             e_span = batch['e_span'].to(device)
             outputs = smodel(input_ids, attention_mask=attention_mask, labels=labels, e_span=e_span)
-            y_hat += outputs[1].detach().tolist()
+            outputs = outputs[1].detach().cpu()
+            y_hat += torch.minimum(outputs, torch.ones(outputs.shape[0])).tolist()
             y_true += labels.detach().tolist()
         print('MSE on Validation:', F.mse_loss(torch.tensor(y_hat), torch.tensor(y_true)).item())
+        final_mse = F.mse_loss(torch.tensor(y_hat), torch.tensor(y_true)).item()
+        #print(torch.tensor(y_hat))
+        #print(torch.tensor(y_true))
+
+        avg_mse = F.mse_loss(torch.tensor(y_true), 0.900799200799201 * torch.ones(len(y_hat))).item()
+        one_mse = F.mse_loss(torch.tensor(y_true), 1.0 * torch.ones(len(y_hat))).item()
+        print('Avg MSE on Validation:', avg_mse)
+        print('One MSE on Validation:', one_mse)    
         smodel.train()
     smodel.encoder.save_pretrained("/srv/share5/emendes3/amzbook_saliency_model")
-    return smodel, tokenizer, test_dataset, test_text
+    return smodel, tokenizer, test_dataset, test_text, final_mse
+
+def hypertrain():
+  params = []
+  for epochs in range(2, 17, 2):
+    for lr in [8e-8, 1e-7, 4e-7, 7e-7, 1e-6, 4e-6]:
+      for batch_size in [4, 8, 16]:
+        params.append({
+          "epochs": epochs,
+          "lr": lr,
+          "batch_size": batch_size
+        })
+  min_mse = 99999999999999
+  ideal_params = None
+  for idx, param in enumerate(params):
+    print('Testing:', idx, "of", len(params))
+    smodel, tokenizer, test_dataset, test_text, mse = train(bs = param["batch_size"], lr=param["lr"], num_epochs = param["epochs"])
+    #print(param, mse)
+    if mse < min_mse:
+      ideal_params = param
+      min_mse = mse
+  print()
+  print("ideal", ideal_params, min_mse)
 if __name__ == "__main__":
-    smodel, tokenizer, test_dataset, test_text = train()
-    eval(smodel, tokenizer, test_dataset, test_text)
+  #hypertrain()
+  smodel, tokenizer, test_dataset, test_text, mse = train(bs = 16, lr=4e-7, num_epochs=12)
+  eval(smodel, tokenizer, test_dataset, test_text)
+
+
+#ideal {'epochs': 12, 'lr': 4e-07, 'batch_size': 16} 0.019421463832259178

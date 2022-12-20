@@ -195,5 +195,14 @@ def train(lr=1e-6, bs = 4, num_epochs = 400, warmup_ratio = 0.1, from_save=True)
     smodel.encoder.save_pretrained("/srv/share5/emendes3/covid_misiformation_saliency_model")
     return smodel, tokenizer, test_dataset, test_text
 if __name__ == "__main__":
-    smodel, tokenizer, test_dataset, test_text = train()
-    eval(smodel, tokenizer, test_dataset, test_text)
+  params = []
+  for epochs in range(2, 17, 2):
+    for lr in [8e-8, 1e-7, 4e-7, 7e-7, 1e-6, 4e-6]:
+      for batch_size in [4, 8, 16]:
+        params.append({
+          "epochs": epochs,
+          "lr": lr
+          "batch_size": batch_size
+        })
+  smodel, tokenizer, test_dataset, test_text = train()
+  eval(smodel, tokenizer, test_dataset, test_text)

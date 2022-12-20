@@ -17,11 +17,13 @@ def print_colored(text, sal_token='<in_sal>', no_sal_token='<out_sal>', cp_token
 
 
 if __name__ == "__main__":
+    a = 0
     with open('local_search.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         line_count = 0
         for row in csv_reader:
             if line_count != 0:
+                a += 1
                 print("Original Text:", end=" ")
                 print_colored(row[0])
                 print("Modified Text:", end=" ")
@@ -31,3 +33,4 @@ if __name__ == "__main__":
                 print()
                 print()
             line_count += 1
+    print(a)
