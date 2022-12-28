@@ -19,18 +19,18 @@ def set_seed(SEED):
     torch.cuda.manual_seed_all(SEED)
 
 set_seed(30)
-MAX_LENGTH = 128
+MAX_LENGTH = 512
 
 class SaliencyDataset(torch.utils.data.Dataset):
     def __init__(self, encodings, labels):
         self.encodings = encodings
         self.labels = labels
-        self.span = [t.index(30522) for t in self.encodings['input_ids']]
+        #self.span = [t.index(30522) for t in self.encodings['input_ids']]
 
     def __getitem__(self, idx):
         item = {key: torch.tensor(val[idx]) for key, val in self.encodings.items()}
         item['labels'] = torch.tensor(self.labels[idx])
-        item['e_span'] = torch.tensor(self.span[idx])
+        #item['e_span'] = torch.tensor(self.span[idx])
         return item
 
     def __len__(self):
@@ -48,61 +48,92 @@ def reconstruct_text(input_ids, tokenizer):
     text = text.replace(" ##","")
     return text
 
-def get_local_neighbors(current_text, test_label, tokenizer, sal_token='<in_sal>', no_sal_token='<out_sal>', max_n=5):
+def get_local_neighbors(current_text, test_label, tokenizer, sal_tokens=['<sal0>','</sal0>','<sal1>','</sal1>'], no_sal_tokens=['<out_sal>','</out_sal>'], max_n=5):
     word_list = current_text.split(' ')
     neighbors = []
-    #print(word_list)
     for n in range(1, max_n + 1):
         for idx, word in enumerate(word_list):
-            if idx + 2 * n - 1 >= len(word_list):
+            if idx + 3 * n - 1 >= len(word_list):
                 break
-            new_word_list = word_list.copy()
-            replacement_token = None
-            if word == sal_token:
-                replacement_token = no_sal_token
-            elif word == no_sal_token:
-                replacement_token = sal_token
-            if replacement_token:
-                for i in range(idx, idx + n, 2):
-                    new_word_list[i] = replacement_token
-                new_text = ' '.join([x for x in new_word_list if x!='[PAD]' and x!='[CLS]' and x!='[SEP]'])
-                neighbors.append(new_text)
-    #print('neighbors', neighbors)
-    #neighbors = neighbors[0:5]
-    test_encodings = tokenizer(neighbors, truncation=True, padding=True, max_length=128)
-    test_encodings['input_ids'] = pad_input(test_encodings['input_ids'])
-    test_encodings['token_type_ids'] = pad_input(test_encodings['token_type_ids'])
-    test_encodings['attention_mask'] = pad_input(test_encodings['attention_mask'])
+            replacement_token_pairs = None
+            if word in [sal_tokens[0], sal_tokens[2]]:
+                replacement_token_pairs = [no_sal_tokens]
+            elif word == no_sal_tokens[0]:
+                replacement_token_pairs = [sal_tokens[0:2], sal_tokens[2:]]
+            if replacement_token_pairs:
+                for cur_pair in replacement_token_pairs:
+                    new_word_list = word_list.copy()
+                    for i in range(idx, idx + 3 * n, 3):
+                        new_word_list[i] = cur_pair[0]
+                        new_word_list[i + 2] = cur_pair[1]
+                    neighbors.append(' '.join([x for x in new_word_list if x!='[PAD]' and x!='[CLS]' and x!='[SEP]']))
+    test_encodings = tokenizer(neighbors, truncation=True, padding=True, max_length=MAX_LENGTH)
     test_dataset = SaliencyDataset(test_encodings, test_label.repeat(len(neighbors)))
     return test_dataset, neighbors
 
-def add_saliency_token(tweets, predicted_class, sal_token='<in_sal>', no_sal_token='<out_sal>'):
+def add_saliency_token(tweets, predicted_class, condition, conf_y, task, sal_tokens=['<sal0>','</sal0>','<sal1>','</sal1>'], no_sal_tokens=['<out_sal>','</out_sal>']):
     new_texts = []
-    for text, pred in zip(tweets, predicted_class):
+
+    # median scores from CHI paper
+    adaptive_dataset_median_scores = {
+        "beer": 0.892,
+        "amzbook": 0.889
+    }
+    for text, pred, cond, conf, data_type in zip(tweets, predicted_class, condition, conf_y, task):
+        other = abs(pred - 1)
+        # replace string tags of highlighted words based on the condition
         target_start_tag = "<span class=" + "class" + str(pred) + ">"
-        other_start_tag = "<span class=" + "class" + str(abs(pred - 1)) + ">"
+        other_start_tag = "<span class=" + "class" + str(other) + ">"
+        if cond == "Human":
+            text = text.replace(target_start_tag, " ")
+            text = text.replace(other_start_tag, " ")
+        elif cond == "Conf.+Single":
+            text = text.replace(target_start_tag, " " + sal_tokens[pred * 2] + " ")
+            text = text.replace(other_start_tag, " ")
+        elif cond == "Conf.+Adaptive":
+            text = text.replace(target_start_tag, " " + sal_tokens[pred * 2] + " ")
+            if conf <= adaptive_dataset_median_scores[data_type]:
+                text = text.replace(other_start_tag, " " + sal_tokens[other * 2]  + " ")
+            else:
+                text = text.replace(other_start_tag, " ")
+        else:
+            text = text.replace(target_start_tag, " " + sal_tokens[pred * 2] + " ")
+            text = text.replace(other_start_tag, " " + sal_tokens[other * 2]  + " ")
+
+        # replace existing single end tag with class specific XML end tags
         end_tag = "</span>"
-        text = text.replace(target_start_tag, " " + sal_token + " ")
-        text = text.replace(other_start_tag, " " + no_sal_token  + " ")
-        text = text.replace(end_tag, "")
         text = text.replace("\"", "")
-        word_list = []
+        text = text.replace(end_tag, " " + end_tag + " ")
         split_text = text.split()
+        next_end_tag = ''
         for idx in range(len(split_text)):
-            if idx == 0 and split_text[idx] not in [sal_token, no_sal_token]:
-                word_list.append(no_sal_token)
-                word_list.append(split_text[idx])
+            if split_text[idx] == sal_tokens[0]:
+                next_end_tag = sal_tokens[1]
+            elif split_text[idx] == sal_tokens[2]:
+                next_end_tag = sal_tokens[3]
+            elif split_text[idx] == end_tag:
+                split_text[idx] = next_end_tag
+                next_end_tag = ''
+
+        # join and split text again to get rid of removed end tags
+        text = ' '.join([x for x in split_text])
+        split_text = text.split()
+
+        # add no_sal tokens around all other tokens
+        word_list = []
+        start_sal_tokens = [sal_tokens[0], sal_tokens[2]]
+        for idx in range(len(split_text)):
+            if idx == 0 and split_text[idx] not in sal_tokens + no_sal_tokens:
+                word_list.extend([no_sal_tokens[0], split_text[idx], no_sal_tokens[1]])
             elif idx == 0:
                 word_list.append(split_text[idx])
-            elif split_text[idx] in [sal_token, no_sal_token]:
-                word_list.append(split_text[idx])
-            elif split_text[idx - 1] in [sal_token, no_sal_token]:
+            elif split_text[idx] in sal_tokens or split_text[idx - 1] in start_sal_tokens:
                 word_list.append(split_text[idx])
             else:
-                word_list.append(no_sal_token)
-                word_list.append(split_text[idx])
+                word_list.extend([no_sal_tokens[0], split_text[idx], no_sal_tokens[1]])
         new_text = ' '.join([x for x in word_list])
         new_texts.append(new_text)
+
     return new_texts
         
 def aggregate_samples(tweet_df):
@@ -119,74 +150,40 @@ def aggregate_samples(tweet_df):
         avg_dict["percent_correct"].append(current_mean)
     return pd.DataFrame(avg_dict)
 
+def pad_input(input_encodings, pad_val = 0, max_length = MAX_LENGTH):
+    return [(np.pad(seq, (0, max_length - len(seq)), 'constant', constant_values=(pad_val))).tolist() for seq in input_encodings]
+
 def create_data_instances(tokenizer):
-    tweet_df = pd.read_csv("../examples.csv")
+    tweet_df = pd.read_csv("../full_examples.csv")
     # aggregate samples accross annotators and calculate per-sample accuracy
     tweet_df = aggregate_samples(tweet_df)
-    
-    # train/test/dev split
-    y_true = tweet_df['percent_correct']
-    data = tweet_df[['system', 'pred_y']]
-    train_data, test_data, train_y_true, test_y_true = train_test_split(data, y_true, test_size = 0.3, random_state=16)
-    test_data, val_data, test_y_true, val_y_true = train_test_split(test_data, test_y_true, test_size = 0.5, random_state=16)
-    print("Mean_score", train_y_true.mean())
+    tweet_df.rename(columns={'system':'text'}, inplace=True)
 
-    train_text, test_text, val_text = train_data['system'].values.tolist(), test_data['system'].values.tolist(), val_data['system'].values.tolist()
-    train_y_true, test_y_true, val_y_true = train_y_true.values, test_y_true.values, val_y_true.values
-    train_pred_class, test_pred_class, val_pred_class = train_data['pred_y'].values.tolist(), test_data['pred_y'].values.tolist(), val_data['pred_y'].values.tolist()
-    
+    # train/test/dev split
+    data = tweet_df[['text', 'pred_y', 'condition', 'conf_y', 'task', 'percent_correct']]
+    train_data, test_data = train_test_split(data, test_size = 0.3, random_state=16)
+    test_data, val_data = train_test_split(test_data, test_size = 0.5, random_state=16)
+    #print("Mean_score", train_data['percent_correct'].mean())
+
+    train_data_dict, test_data_dict, val_data_dict = {}, {}, {}
+    for label in data.columns:
+        train_data_dict[label] = train_data[label].values.tolist()
+        test_data_dict[label] = test_data[label].values.tolist()
+        val_data_dict[label] = val_data[label].values.tolist()
 
     # tokenize tweets
-    train_text = add_saliency_token(train_text, train_pred_class)
-    test_text = add_saliency_token(test_text, test_pred_class)
-    val_text = add_saliency_token(val_text, val_pred_class)
+    train_text = add_saliency_token(train_data_dict['text'], train_data_dict['pred_y'], train_data_dict['condition'], train_data_dict['conf_y'], train_data_dict['task'])
+    test_text = add_saliency_token(test_data_dict['text'], test_data_dict['pred_y'], test_data_dict['condition'], test_data_dict['conf_y'], test_data_dict['task'])
+    val_text = add_saliency_token(val_data_dict['text'], val_data_dict['pred_y'], val_data_dict['condition'], val_data_dict['conf_y'], val_data_dict['task'])
 
-    train_encodings = tokenizer(train_text, truncation=True, padding=True, max_length=256)
-    test_encodings = tokenizer(test_text, truncation=True, padding=True, max_length=256)
-    val_encodings = tokenizer(val_text, truncation=True, padding=True, max_length=256)
+    train_encodings = tokenizer(train_data_dict['text'], truncation=True, padding=True, max_length=MAX_LENGTH)
+    test_encodings = tokenizer(test_data_dict['text'], truncation=True, padding=True, max_length=MAX_LENGTH)
+    val_encodings = tokenizer(val_data_dict['text'], truncation=True, padding=True, max_length=MAX_LENGTH)
 
-    #train_encodings['input_ids'] = pad_input(train_encodings['input_ids'])
-    #test_encodings['input_ids'] = pad_input(test_encodings['input_ids'])
-
-    #train_encodings['token_type_ids'] = pad_input(train_encodings['token_type_ids'])
-    #test_encodings['token_type_ids'] = pad_input(test_encodings['token_type_ids'])
-
-    #train_encodings['attention_mask'] = pad_input(train_encodings['attention_mask'])
-    #test_encodings['attention_mask'] = pad_input(test_encodings['attention_mask'])
-
-    train_dataset = SaliencyDataset(train_encodings, train_y_true)
-    test_dataset = SaliencyDataset(test_encodings, test_y_true)
-    val_dataset = SaliencyDataset(val_encodings, val_y_true)
+    train_dataset = SaliencyDataset(train_encodings, train_data_dict['percent_correct'])
+    test_dataset = SaliencyDataset(test_encodings, test_data_dict['percent_correct'])
+    val_dataset = SaliencyDataset(val_encodings, val_data_dict['percent_correct'])
 
     return train_dataset, test_dataset, val_dataset, test_text
 
-def pad_input(input_encodings, pad_val = 0, max_length = MAX_LENGTH):
-    return [(np.pad(seq, (0, 128 - len(seq)), 'constant', constant_values=(pad_val))).tolist() for seq in input_encodings]
 
-
-'''
-    train_data, test_data, val_data = data[data['testid'].isin(train_ids)]['system'], data[data['testid'].isin(test_ids)]['system'], data[data['testid'].isin(val_ids)]['system']
-
-    train_label, test_label, val_label = labels[labels['testid'].isin(train_ids)]['correctness'], labels[labels['testid'].isin(test_ids)]['correctness'], labels[labels['testid'].isin(val_ids)]['correctness']
- 
-    train_text, test_text, val_text = train_data.values.tolist(), test_data.values.tolist(), val_data.values.tolist()
-    train_label, test_label, val_label = train_label.values, test_label.values, val_label.values
-
-    zipped_train = list(zip(train_text, train_label))
-    zipped_test = list(zip(test_text, test_label))
-    zipped_val = list(zip(val_text, val_label))
-
-    random.shuffle(zipped_train)
-    random.shuffle(zipped_test)
-    random.shuffle(zipped_val)
-
-    train_text, train_label = zip(*zipped_train)
-    test_text, test_label = zip(*zipped_test)
-    val_text, val_label = zip(*zipped_val)
-
-    train_text, train_label = list(train_text), list(train_label)
-    test_text, test_label = list(test_text), list(test_label)
-    val_text, val_label = list(val_text), list(val_label)
-
-
-'''

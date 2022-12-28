@@ -6,7 +6,7 @@ import torch
 from  torch.utils.data import DataLoader
 from transformers import AutoTokenizer, AutoModel, AutoModelForSequenceClassification
 import csv
-MAX_LENGTH = 128
+MAX_LENGTH = 512
 
 '''
 class SaliencyModel(nn.Module):
@@ -44,23 +44,31 @@ class SaliencyModel(nn.Module):
     return avg_loss, logits
 '''
 class SaliencyModel(nn.Module):
-  def __init__(self, encoder, num_labels):
+  def __init__(self, encoder, num_labels, regressor_in=768, regressor_out=1):
     super().__init__()
     self.num_labels = num_labels
     self.encoder = encoder
-    self.dropout = nn.Dropout(self.encoder.config.hidden_dropout_prob)
-    self.classifier = nn.Linear(self.encoder.config.hidden_size, 1)
-    #self.encoder.init_weights()
+    #self.dropout = nn.Dropout(self.encoder.config.hidden_dropout_prob)
+    #self.regressor = nn.Linear(self.encoder.config.hidden_size, 1)
+    self.regressor = nn.Sequential(
+            nn.Dropout(self.encoder.config.hidden_dropout_prob),
+            nn.Linear(regressor_in, regressor_out),
+            nn.Sigmoid()
+    )
 
-  def forward(self, input_ids, token_type_ids=None, attention_mask=None, labels=None, e_span=None):
+  def forward(self, input_ids, token_type_ids=None, attention_mask=None, labels=None):
     output = self.encoder(input_ids)
+    cls_token = output.last_hidden_state[:,0,:]
+    logits = self.regressor(cls_token)[:,0]
+    '''
     sequence_output = output[0]
     batchsize, _, _ = sequence_output.size()
     batch_index = [i for i in range(batchsize)]
     repr = sequence_output[batch_index, e_span]
 
     cls_token = self.dropout(repr)
-    logits = self.classifier(cls_token).reshape(batchsize)
+    logits = self.regressor(cls_token).reshape(batchsize)
+    '''
     if labels is not None:
       avg_loss = F.mse_loss(logits, labels.float())
 
@@ -80,8 +88,8 @@ def eval(smodel, tokenizer, test_dataset, test_text, bs = 1):
         input_ids = batch['input_ids'].to(device)
         attention_mask = batch['attention_mask'].to(device)
         labels = batch['labels'].to(device)
-        e_span = batch['e_span'].to(device)
-        outputs = smodel(input_ids, attention_mask=attention_mask, labels=labels, e_span=e_span)
+        #e_span = batch['e_span'].to(device)
+        outputs = smodel(input_ids, attention_mask=attention_mask, labels=labels)
         difference = abs(1 - outputs[1].detach().item())
 
         initial_text = test_text[batch_idx]
@@ -94,14 +102,16 @@ def eval(smodel, tokenizer, test_dataset, test_text, bs = 1):
           while True:
               neighbor_dataset, neighbor_text = preprocess_stance.get_local_neighbors(current_text, batch['labels'], tokenizer)
               neighbor_dataloader = DataLoader(neighbor_dataset, batch_size=bs)
+              print(len(neighbor_dataset))
               found_new = False
               for inner_batch_idx, inner_batch in enumerate(neighbor_dataloader):
                   input_ids = inner_batch['input_ids'].to(device)
                   attention_mask = inner_batch['attention_mask'].to(device)
                   labels = inner_batch['labels'].to(device)
-                  e_span = inner_batch['e_span'].to(device)
-                  outputs = smodel(input_ids, attention_mask=attention_mask, labels=labels, e_span=e_span)
+                  outputs = smodel(input_ids, attention_mask=attention_mask, labels=labels)
                   current_difference = abs(1 - outputs[1].detach().item())
+                  print(current_difference)
+                  print(neighbor_text[inner_batch_idx])
                   if current_difference < difference:
                       difference = current_difference
                       current_text = neighbor_text[inner_batch_idx]
@@ -122,8 +132,8 @@ def eval(smodel, tokenizer, test_dataset, test_text, bs = 1):
 
 
 def train(lr=2e-7, bs = 8, num_epochs = 3, warmup_ratio = 0.1, from_save=False):
-  
-    saliency_markers = ['<in_sal>', '<out_sal>']
+    preprocess_stance.set_seed(30)
+    saliency_markers = ['<sal0>','</sal0>','<sal1>','</sal1>','<out_sal>','</out_sal>']
     tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
     tokenizer.add_tokens(saliency_markers)
     train_dataset, test_dataset, val_dataset, test_text = preprocess_stance.create_data_instances(tokenizer)
@@ -134,7 +144,7 @@ def train(lr=2e-7, bs = 8, num_epochs = 3, warmup_ratio = 0.1, from_save=False):
         encoder = BertModel.from_pretrained("/srv/share5/emendes3/amzbook_saliency_model", output_hidden_states=True)
         smodel = SaliencyModel(encoder, MAX_LENGTH)
         smodel.cuda()
-        return smodel, tokenizer, test_dataset, test_text
+        return smodel, tokenizer, test_dataset, test_text, None, None
 
     encoder = BertModel.from_pretrained('bert-base-uncased', output_hidden_states=True)
     encoder.resize_token_embeddings(len(tokenizer))
@@ -142,11 +152,9 @@ def train(lr=2e-7, bs = 8, num_epochs = 3, warmup_ratio = 0.1, from_save=False):
     smodel.cuda()
     smodel.train()
 
-
     num_train_steps = int(len(train_dataset) / bs * num_epochs)
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
     
-
     param_optimizer = list(smodel.named_parameters())
     no_decay = ['bias', 'LayerNorm.bias', 'LayerNorm.weight']
     optimizer_grouped_parameters = [
@@ -158,38 +166,38 @@ def train(lr=2e-7, bs = 8, num_epochs = 3, warmup_ratio = 0.1, from_save=False):
     scheduler = get_linear_schedule_with_warmup(optim,
                                                 num_warmup_steps=int(0.1* num_train_steps),
                                                 num_training_steps=num_train_steps)
-    
-    best_f1 = 0
-    best_model = None
-    accum_iter = 2 # gradient accumulation
-    final_mse = 0
+    '''
+    Training
+    '''
+    AVG_TRAIN_SCORE_BASELINE = 0.8767871389180644
+    best_mse = 999999999
+    best_epoch = 0 # keep track of best epoch
+    current_mse = 0
     for epoch in range(num_epochs):
         print("Epoch: ", epoch, end="  ")
         smodel.train()
-        count = 0
         total_loss = 0
         
         for batch_idx, batch in enumerate(train_loader):
-            #print(batch)
             input_ids = batch['input_ids'].to(device)
             attention_mask = batch['attention_mask'].to(device)
             labels = batch['labels'].to(device)
-            e_span = batch['e_span'].to(device)
-            outputs = smodel(input_ids, attention_mask=attention_mask, labels=labels, e_span=e_span)
+            outputs = smodel(input_ids, attention_mask=attention_mask, labels=labels)
 
             loss = outputs[0]
-            loss = loss / accum_iter # gradient accumulation
-
             total_loss += loss.item()
             loss.backward()
-            if ((batch_idx + 1) % accum_iter == 0) or (batch_idx + 1 == len(train_loader)): # gradient accumulation
+
+            if batch_idx + 1 == len(train_loader):
                 optim.step()
                 scheduler.step()
                 optim.zero_grad()
-            count += bs
         avg_train_loss = total_loss / len(train_loader)
         print("Average train loss: {}".format(avg_train_loss))
         
+        '''
+        Evaluation
+        '''
         smodel.eval()
         y_hat = []
         y_true = []
@@ -197,49 +205,54 @@ def train(lr=2e-7, bs = 8, num_epochs = 3, warmup_ratio = 0.1, from_save=False):
             input_ids = batch['input_ids'].to(device)
             attention_mask = batch['attention_mask'].to(device)
             labels = batch['labels'].to(device)
-            e_span = batch['e_span'].to(device)
-            outputs = smodel(input_ids, attention_mask=attention_mask, labels=labels, e_span=e_span)
+            outputs = smodel(input_ids, attention_mask=attention_mask, labels=labels)
             outputs = outputs[1].detach().cpu()
-            y_hat += torch.minimum(outputs, torch.ones(outputs.shape[0])).tolist()
+            y_hat += outputs.tolist()
             y_true += labels.detach().tolist()
         print('MSE on Validation:', F.mse_loss(torch.tensor(y_hat), torch.tensor(y_true)).item())
-        final_mse = F.mse_loss(torch.tensor(y_hat), torch.tensor(y_true)).item()
-        #print(torch.tensor(y_hat))
-        #print(torch.tensor(y_true))
+        current_mse = F.mse_loss(torch.tensor(y_hat), torch.tensor(y_true)).item()
 
-        avg_mse = F.mse_loss(torch.tensor(y_true), 0.900799200799201 * torch.ones(len(y_hat))).item()
+        avg_mse = F.mse_loss(torch.tensor(y_true),  AVG_TRAIN_SCORE_BASELINE * torch.ones(len(y_hat))).item()
         one_mse = F.mse_loss(torch.tensor(y_true), 1.0 * torch.ones(len(y_hat))).item()
         print('Avg MSE on Validation:', avg_mse)
-        print('One MSE on Validation:', one_mse)    
+        print('One MSE on Validation:', one_mse)
+        if best_mse > current_mse:
+          best_mse = current_mse
+          best_epoch = epoch    
         smodel.train()
     smodel.encoder.save_pretrained("/srv/share5/emendes3/amzbook_saliency_model")
-    return smodel, tokenizer, test_dataset, test_text, final_mse
+    return smodel, tokenizer, test_dataset, test_text, best_mse, best_epoch
 
 def hypertrain():
+  MAX_EPOCHS_TESTED = 20
+  
+  # generate hyper params to test 
   params = []
-  for epochs in range(2, 17, 2):
-    for lr in [8e-8, 1e-7, 4e-7, 7e-7, 1e-6, 4e-6]:
-      for batch_size in [4, 8, 16]:
-        params.append({
-          "epochs": epochs,
-          "lr": lr,
-          "batch_size": batch_size
-        })
-  min_mse = 99999999999999
+  for lr in [2e-6, 5e-6, 8e-6, 1e-5, 4e-5, 7e-5, 1e-4]:
+    for batch_size in [4, 8, 16, 32]:
+      params.append({
+        'lr': lr,
+        'batch_size': batch_size
+      })
+  
+  # brute force search for best hyper params
+  min_mse = 999999999
   ideal_params = None
-  for idx, param in enumerate(params):
-    print('Testing:', idx, "of", len(params))
-    smodel, tokenizer, test_dataset, test_text, mse = train(bs = param["batch_size"], lr=param["lr"], num_epochs = param["epochs"])
-    #print(param, mse)
+  for idx, p in enumerate(params):
+    print('Testing:', idx + 1, "of", len(params))
+    _, _, _, _, mse, best_epoch = train(bs = p["batch_size"], lr=p["lr"], num_epochs = MAX_EPOCHS_TESTED)
+    p['epoch'] = best_epoch 
     if mse < min_mse:
-      ideal_params = param
+      ideal_params = p
       min_mse = mse
+      print('New Best Parameters:', ideal_params, end=' ')
+      print('Best MSE:', min_mse)
   print()
-  print("ideal", ideal_params, min_mse)
+  print("Ideal", ideal_params, min_mse)
 if __name__ == "__main__":
   #hypertrain()
-  smodel, tokenizer, test_dataset, test_text, mse = train(bs = 16, lr=4e-7, num_epochs=12)
+  smodel, tokenizer, test_dataset, test_text, mse, _ = train(bs = 32, lr=2e-06, num_epochs=19)
   eval(smodel, tokenizer, test_dataset, test_text)
 
 
-#ideal {'epochs': 12, 'lr': 4e-07, 'batch_size': 16} 0.019421463832259178
+#Ideal {'lr': 2e-06, 'batch_size': 32, 'epoch': 19} 0.008832832798361778
