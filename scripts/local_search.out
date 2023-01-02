@@ -1,0 +1,3453 @@
+Testing: 1 of 40
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1742208479850922
+MSE on Validation: 0.17435678839683533
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17390731806462667
+MSE on Validation: 0.17382776737213135
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.1724400708697877
+MSE on Validation: 0.17258144915103912
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.16921317176717632
+MSE on Validation: 0.17052671313285828
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.16685364163427982
+MSE on Validation: 0.16764862835407257
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.1680393268196088
+MSE on Validation: 0.1639488786458969
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.16251737357310528
+MSE on Validation: 0.15945906937122345
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.15830860111229825
+MSE on Validation: 0.15421785414218903
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.1521603452428332
+MSE on Validation: 0.14831621944904327
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.1456236998146435
+MSE on Validation: 0.14183036983013153
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.14048947639903933
+MSE on Validation: 0.13486216962337494
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.1376681885207599
+MSE on Validation: 0.1275317370891571
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.12759145848312467
+MSE on Validation: 0.11991307884454727
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.12497590411946459
+MSE on Validation: 0.11215673387050629
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.11168204769843591
+MSE on Validation: 0.10434956103563309
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.10669045375203187
+MSE on Validation: 0.09659320116043091
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.09967762632471211
+MSE on Validation: 0.08900052309036255
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.09213540745231341
+MSE on Validation: 0.08161164075136185
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.08469125452750134
+MSE on Validation: 0.07448983937501907
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.07743589239159845
+MSE on Validation: 0.0677211657166481
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+New Best Parameters: {'lr': 9e-07, 'batch_size': 4, 'epoch': 19} Best MSE: 0.0677211657166481
+Testing: 2 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.17917580405871072
+MSE on Validation: 0.17435689270496368
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17467107761789252
+MSE on Validation: 0.17327934503555298
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.17338046238378244
+MSE on Validation: 0.1707751303911209
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.17195228018142558
+MSE on Validation: 0.1666930764913559
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.16237035283335932
+MSE on Validation: 0.1610288769006729
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.1576312087752201
+MSE on Validation: 0.15385693311691284
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.14790567534941215
+MSE on Validation: 0.14532352983951569
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.14708071395202918
+MSE on Validation: 0.13564299046993256
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.1372626699783184
+MSE on Validation: 0.12509062886238098
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.12499210404025184
+MSE on Validation: 0.1139136552810669
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.1111821712995017
+MSE on Validation: 0.10251446068286896
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.1031648233808853
+MSE on Validation: 0.09116917848587036
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.09131219624369233
+MSE on Validation: 0.08011545985937119
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.08530314390858014
+MSE on Validation: 0.06961920112371445
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.07012639981177118
+MSE on Validation: 0.05996856093406677
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.06377083449452012
+MSE on Validation: 0.05122562497854233
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.05544448602530691
+MSE on Validation: 0.04349596053361893
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.04772271436673624
+MSE on Validation: 0.03681144118309021
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.041795254995425545
+MSE on Validation: 0.031176723539829254
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.035450419721504055
+MSE on Validation: 0.026568571105599403
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+New Best Parameters: {'lr': 9e-07, 'batch_size': 8, 'epoch': 19} Best MSE: 0.026568571105599403
+Testing: 3 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1762586725609643
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173971349639552
+MSE on Validation: 0.17220498621463776
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.17656960870538438
+MSE on Validation: 0.16727040708065033
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.16252474806138448
+MSE on Validation: 0.15936176478862762
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.15186632690685137
+MSE on Validation: 0.1485963612794876
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.1499568106872695
+MSE on Validation: 0.1353694647550583
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.1326247618666717
+MSE on Validation: 0.12034769356250763
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.11979475670627185
+MSE on Validation: 0.10436280816793442
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.10978149835552488
+MSE on Validation: 0.08825945109128952
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.08889591161693845
+MSE on Validation: 0.07284507900476456
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.07252520322799683
+MSE on Validation: 0.058834172785282135
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.06443671722497259
+MSE on Validation: 0.046635422855615616
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.049660957019243925
+MSE on Validation: 0.0365755595266819
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.042330145835876465
+MSE on Validation: 0.028630614280700684
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.039662664090948443
+MSE on Validation: 0.022784005850553513
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.030670526969645704
+MSE on Validation: 0.018615683540701866
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.026598027973834957
+MSE on Validation: 0.01578911580145359
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.023143194216702665
+MSE on Validation: 0.013977712020277977
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02381742506154946
+MSE on Validation: 0.012881018221378326
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.022674908296072056
+MSE on Validation: 0.012283682823181152
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+New Best Parameters: {'lr': 9e-07, 'batch_size': 16, 'epoch': 19} Best MSE: 0.012283682823181152
+Testing: 4 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1759553849697113
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173747752393995
+MSE on Validation: 0.17011329531669617
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.16749365840639388
+MSE on Validation: 0.16045628488063812
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.15629452679838454
+MSE on Validation: 0.14543037116527557
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.1450932536806379
+MSE on Validation: 0.12595100700855255
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.12690309754439763
+MSE on Validation: 0.10375899076461792
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.1033251743231501
+MSE on Validation: 0.08118508756160736
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.08448786182062966
+MSE on Validation: 0.060438770800828934
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.06621969863772392
+MSE on Validation: 0.04322982206940651
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.04799330713493483
+MSE on Validation: 0.030323676764965057
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.03611550985702446
+MSE on Validation: 0.021687954664230347
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.02910995403570788
+MSE on Validation: 0.0164842177182436
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.025059598365000317
+MSE on Validation: 0.013665462844073772
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.022603253966995647
+MSE on Validation: 0.012361790984869003
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.02305332544658865
+MSE on Validation: 0.011954572051763535
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.023179107744778906
+MSE on Validation: 0.011943685822188854
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.022446891758590937
+MSE on Validation: 0.012068516574800014
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.023775188651468073
+MSE on Validation: 0.012211897410452366
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.023434754328003952
+MSE on Validation: 0.012327529489994049
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.024769724080605165
+MSE on Validation: 0.012395371682941914
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+New Best Parameters: {'lr': 9e-07, 'batch_size': 32, 'epoch': 15} Best MSE: 0.011943685822188854
+Testing: 5 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1742208479850922
+MSE on Validation: 0.17435678839683533
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17390731806462667
+MSE on Validation: 0.1731751710176468
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.1718225748330917
+MSE on Validation: 0.17040665447711945
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.16719998348996323
+MSE on Validation: 0.16591669619083405
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.1625338040011109
+MSE on Validation: 0.1597069948911667
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.1604231761873893
+MSE on Validation: 0.1518544852733612
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.15098240599036217
+MSE on Validation: 0.14253003895282745
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.1420159747578063
+MSE on Validation: 0.13202570378780365
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.1312429557009688
+MSE on Validation: 0.12062918394804001
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.11925439360850262
+MSE on Validation: 0.10875607281923294
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.1084851713253642
+MSE on Validation: 0.0967484563589096
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.10044060359304806
+MSE on Validation: 0.08495775610208511
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.08732503280043602
+MSE on Validation: 0.07365737110376358
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.07998246474648421
+MSE on Validation: 0.06315810233354568
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.06591175138106886
+MSE on Validation: 0.05364340543746948
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.05826973082181418
+MSE on Validation: 0.045230329036712646
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.05097315513159869
+MSE on Validation: 0.037963010370731354
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.04370549054078336
+MSE on Validation: 0.0318717285990715
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.037878201782422245
+MSE on Validation: 0.026889819651842117
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.03423762896959231
+MSE on Validation: 0.022928250953555107
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 6 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.17917580405871072
+MSE on Validation: 0.17435689270496368
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17467107761789252
+MSE on Validation: 0.17195627093315125
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.17212895110801416
+MSE on Validation: 0.16645528376102448
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.16785452983997487
+MSE on Validation: 0.15768471360206604
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.15388136826179646
+MSE on Validation: 0.1457599550485611
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.1431499355369144
+MSE on Validation: 0.13130372762680054
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.12682667236637185
+MSE on Validation: 0.11502383649349213
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.11834105104207993
+MSE on Validation: 0.09795858711004257
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.10156586407511323
+MSE on Validation: 0.08105257153511047
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.08306579898904871
+MSE on Validation: 0.06522127240896225
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.06597677018079492
+MSE on Validation: 0.05129344016313553
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.05497011500928137
+MSE on Validation: 0.03963862732052803
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.042845664683867385
+MSE on Validation: 0.030468620359897614
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.03844087391539856
+MSE on Validation: 0.023695219308137894
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.031969395431655424
+MSE on Validation: 0.01897013746201992
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.026718960385079735
+MSE on Validation: 0.015841664746403694
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.02455051639979636
+MSE on Validation: 0.013874868862330914
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.02270166651794204
+MSE on Validation: 0.012737618759274483
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02248812321987417
+MSE on Validation: 0.012160004116594791
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.021985135067047343
+MSE on Validation: 0.011938540264964104
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+New Best Parameters: {'lr': 2e-06, 'batch_size': 8, 'epoch': 19} Best MSE: 0.011938540264964104
+Testing: 7 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1762586725609643
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173971349639552
+MSE on Validation: 0.16958068311214447
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.1740730181336403
+MSE on Validation: 0.15887340903282166
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.1548602847116334
+MSE on Validation: 0.1423114389181137
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.1361118411379201
+MSE on Validation: 0.1211521178483963
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.12328789702483586
+MSE on Validation: 0.09758584946393967
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.09655565342732839
+MSE on Validation: 0.07436663657426834
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.07676057890057564
+MSE on Validation: 0.053915806114673615
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.06032082677951881
+MSE on Validation: 0.03770432993769646
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.04120160346584661
+MSE on Validation: 0.026183586567640305
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.031329309700855186
+MSE on Validation: 0.01888575404882431
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.026494274248502085
+MSE on Validation: 0.01472481619566679
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.022560560277530124
+MSE on Validation: 0.012716124765574932
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.02188842184841633
+MSE on Validation: 0.01198662631213665
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.032786885010344644
+MSE on Validation: 0.011919226497411728
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.022461524532575692
+MSE on Validation: 0.012089962139725685
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.022748611800904785
+MSE on Validation: 0.012290660291910172
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.024126647638955286
+MSE on Validation: 0.012419651262462139
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02401917791991894
+MSE on Validation: 0.012463205493986607
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.02506778043295656
+MSE on Validation: 0.01240265928208828
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+New Best Parameters: {'lr': 2e-06, 'batch_size': 16, 'epoch': 14} Best MSE: 0.011919226497411728
+Testing: 8 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1759553849697113
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173747752393995
+MSE on Validation: 0.16499368846416473
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.16264537828309195
+MSE on Validation: 0.14455673098564148
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.1412640746150698
+MSE on Validation: 0.11513411998748779
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.11665607988834381
+MSE on Validation: 0.08229605108499527
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.08471424877643585
+MSE on Validation: 0.05281883850693703
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.0552524525140013
+MSE on Validation: 0.03158153221011162
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.038297458950962336
+MSE on Validation: 0.019422290846705437
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.02785341175539153
+MSE on Validation: 0.013878480531275272
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.022193430590310266
+MSE on Validation: 0.01202692836523056
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.021903201272445067
+MSE on Validation: 0.011931248940527439
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.02363588454734002
+MSE on Validation: 0.012368290685117245
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.024437980859407356
+MSE on Validation: 0.012752576731145382
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.024638293044907705
+MSE on Validation: 0.012972041964530945
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.026533575462443486
+MSE on Validation: 0.013016252778470516
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.026200602629355023
+MSE on Validation: 0.012917134910821915
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.024690335283854177
+MSE on Validation: 0.012685754336416721
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.025581922648208483
+MSE on Validation: 0.012324538081884384
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.024143258508827006
+MSE on Validation: 0.01184647623449564
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.024550015372889384
+MSE on Validation: 0.011285330168902874
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+New Best Parameters: {'lr': 2e-06, 'batch_size': 32, 'epoch': 19} Best MSE: 0.011285330168902874
+Testing: 9 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1742208479850922
+MSE on Validation: 0.17435678839683533
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17390731806462667
+MSE on Validation: 0.17257820069789886
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.17125519308841453
+MSE on Validation: 0.1684398651123047
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.16538730460517811
+MSE on Validation: 0.16181844472885132
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.15867462944028513
+MSE on Validation: 0.15272127091884613
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.15369946945388363
+MSE on Validation: 0.14141586422920227
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.14102227606301038
+MSE on Validation: 0.12837021052837372
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.12838201801169594
+MSE on Validation: 0.11409041285514832
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.11429875252662965
+MSE on Validation: 0.09932161122560501
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.09888420296165179
+MSE on Validation: 0.0847490206360817
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.0852854812763772
+MSE on Validation: 0.07086534798145294
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.07500920072197914
+MSE on Validation: 0.05822740122675896
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.06232391427850948
+MSE on Validation: 0.0471542663872242
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.05430514544670312
+MSE on Validation: 0.03785867244005203
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.043147626139645304
+MSE on Validation: 0.03035447560250759
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.03692947364992128
+MSE on Validation: 0.024563757702708244
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.03240622238273609
+MSE on Validation: 0.02025667205452919
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.02810816689095688
+MSE on Validation: 0.017185643315315247
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.025527274332729714
+MSE on Validation: 0.015079572796821594
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.025071238756250096
+MSE on Validation: 0.013697702437639236
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 10 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.17917580405871072
+MSE on Validation: 0.17435689270496368
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17467107761789252
+MSE on Validation: 0.17076100409030914
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.17099782879705783
+MSE on Validation: 0.16260337829589844
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.1641947880939201
+MSE on Validation: 0.14976854622364044
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.1464226695674437
+MSE on Validation: 0.13284535706043243
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.13089946822987664
+MSE on Validation: 0.11312367022037506
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.10983529907685739
+MSE on Validation: 0.09232177585363388
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.09661301694534442
+MSE on Validation: 0.07215717434883118
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.07698973627002151
+MSE on Validation: 0.05415636673569679
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.057681506016740096
+MSE on Validation: 0.03942497819662094
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.04295136503599308
+MSE on Validation: 0.02850193902850151
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.034719416664706335
+MSE on Validation: 0.021041497588157654
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.027030378476613097
+MSE on Validation: 0.01641988568007946
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.026281165752421926
+MSE on Validation: 0.013778389431536198
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.026203691062551958
+MSE on Validation: 0.012472597882151604
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.02226718028800355
+MSE on Validation: 0.011951960623264313
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.022552374810739247
+MSE on Validation: 0.011870776303112507
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.022826916710646065
+MSE on Validation: 0.011987422592937946
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02326304000733351
+MSE on Validation: 0.012152872048318386
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.023497233842068387
+MSE on Validation: 0.012281815521419048
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 11 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1762586725609643
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173971349639552
+MSE on Validation: 0.16724221408367157
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.1718396885054452
+MSE on Validation: 0.15150710940361023
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.1481389387377671
+MSE on Validation: 0.128073588013649
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.1229299067386559
+MSE on Validation: 0.10001824796199799
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.10264652222394943
+MSE on Validation: 0.07195350527763367
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.07215613579111439
+MSE on Validation: 0.04813779145479202
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.05265668912657669
+MSE on Validation: 0.03094363771378994
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.038069816173187325
+MSE on Validation: 0.020329119637608528
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.026184010851596082
+MSE on Validation: 0.014774354174733162
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.023845716046967676
+MSE on Validation: 0.012433976866304874
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.02170798245684377
+MSE on Validation: 0.011871883645653725
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.021933268489582197
+MSE on Validation: 0.012067584320902824
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.023050419919724976
+MSE on Validation: 0.012393996119499207
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.03600412653759122
+MSE on Validation: 0.012572087347507477
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.02375136177787291
+MSE on Validation: 0.01262645423412323
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.02381223991479991
+MSE on Validation: 0.012558002024888992
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.025029605720192194
+MSE on Validation: 0.012345907278358936
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02426047804432788
+MSE on Validation: 0.012013724073767662
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.024677350352119123
+MSE on Validation: 0.011519563384354115
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 12 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1759553849697113
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173747752393995
+MSE on Validation: 0.16044868528842926
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.15833801989044463
+MSE on Validation: 0.13114242255687714
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.1286025888153485
+MSE on Validation: 0.09241306781768799
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.09514737554958888
+MSE on Validation: 0.05552166700363159
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.058991932443210056
+MSE on Validation: 0.029903022572398186
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.034921464643308094
+MSE on Validation: 0.017143474891781807
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.026220329904130528
+MSE on Validation: 0.01256508007645607
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.02287935172872884
+MSE on Validation: 0.011848673224449158
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.022146685714168206
+MSE on Validation: 0.012335172854363918
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.023473070801368782
+MSE on Validation: 0.01281940657645464
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.025252803760979856
+MSE on Validation: 0.013093988411128521
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.025746873846011504
+MSE on Validation: 0.013151520863175392
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.02546346320637635
+MSE on Validation: 0.012976394966244698
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.026759773226720945
+MSE on Validation: 0.012563124299049377
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.025740003745470728
+MSE on Validation: 0.011935361661016941
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.02361469157040119
+MSE on Validation: 0.011189475655555725
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.023752803515110697
+MSE on Validation: 0.010536178015172482
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.021765022671648433
+MSE on Validation: 0.010432404465973377
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.02191769571176597
+MSE on Validation: 0.011193589307367802
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+New Best Parameters: {'lr': 3e-06, 'batch_size': 32, 'epoch': 18} Best MSE: 0.010432404465973377
+Testing: 13 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1742208479850922
+MSE on Validation: 0.17435678839683533
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17390731806462667
+MSE on Validation: 0.17140065133571625
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.17011375809615514
+MSE on Validation: 0.1645767092704773
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.16180564976244602
+MSE on Validation: 0.15381601452827454
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.1511568715268711
+MSE on Validation: 0.13942404091358185
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.14085707855674456
+MSE on Validation: 0.12223413586616516
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.12268065998576722
+MSE on Validation: 0.10346043854951859
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.1043673234657859
+MSE on Validation: 0.08452876657247543
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.08629466164505707
+MSE on Validation: 0.0667290985584259
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.06787174497291727
+MSE on Validation: 0.05120765417814255
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.05359600944760835
+MSE on Validation: 0.03850787505507469
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.0437665905381711
+MSE on Validation: 0.028815947473049164
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.035905217259841145
+MSE on Validation: 0.021960003301501274
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.03068800033333729
+MSE on Validation: 0.017417490482330322
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.026367761229850212
+MSE on Validation: 0.01460096426308155
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.024077440418724744
+MSE on Validation: 0.013004129752516747
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.02343064191628177
+MSE on Validation: 0.012222399935126305
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.022824020116185804
+MSE on Validation: 0.011954057030379772
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02312152011469358
+MSE on Validation: 0.011955348774790764
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.02436914595441436
+MSE on Validation: 0.012070520780980587
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 14 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.17917580405871072
+MSE on Validation: 0.17435689270496368
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17467107761789252
+MSE on Validation: 0.16839681565761566
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.1687552953759829
+MSE on Validation: 0.1550866663455963
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.1570331785413954
+MSE on Validation: 0.13481487333774567
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.13232474001469435
+MSE on Validation: 0.10973367840051651
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.1089728200049312
+MSE on Validation: 0.08327177911996841
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.08196609963973363
+MSE on Validation: 0.058967504650354385
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.06473297418819533
+MSE on Validation: 0.03950578719377518
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.04623700126453682
+MSE on Validation: 0.025935817509889603
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.03216728036878286
+MSE on Validation: 0.017908794805407524
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.025784010171062417
+MSE on Validation: 0.013883753679692745
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.023204786306316103
+MSE on Validation: 0.01221562922000885
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.021748394252628915
+MSE on Validation: 0.011834929697215557
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.023564773163309804
+MSE on Validation: 0.011990605853497982
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.028313282954817016
+MSE on Validation: 0.012248019687831402
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.023822880759662775
+MSE on Validation: 0.012434141710400581
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.024345412927990157
+MSE on Validation: 0.012514344416558743
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.02494192351932051
+MSE on Validation: 0.012492835521697998
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02459027528918038
+MSE on Validation: 0.012366185896098614
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.024587436988777307
+MSE on Validation: 0.012110433541238308
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 15 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1762586725609643
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173971349639552
+MSE on Validation: 0.1626109480857849
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.16742306042994773
+MSE on Validation: 0.1375129520893097
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.13535193939294135
+MSE on Validation: 0.10309291630983353
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.09976281651428767
+MSE on Validation: 0.06774763762950897
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.07109621938850198
+MSE on Validation: 0.03987623751163483
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.042555477270590406
+MSE on Validation: 0.02294955775141716
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.03063555607306106
+MSE on Validation: 0.014939493499696255
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.023607528635433743
+MSE on Validation: 0.012159413658082485
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.021278379385226538
+MSE on Validation: 0.011946696788072586
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.025015216620106782
+MSE on Validation: 0.012410063296556473
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.023184735003659234
+MSE on Validation: 0.012780770659446716
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.024058367874074196
+MSE on Validation: 0.012948796153068542
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.024986445072240064
+MSE on Validation: 0.012922528199851513
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.0377810815365852
+MSE on Validation: 0.012606137432157993
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.024034679950481013
+MSE on Validation: 0.01208791695535183
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.02323673710426582
+MSE on Validation: 0.0113839628174901
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.023467366783214465
+MSE on Validation: 0.010634739883244038
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.022401421330869198
+MSE on Validation: 0.01036276388913393
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.021669183957523534
+MSE on Validation: 0.011090622283518314
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+New Best Parameters: {'lr': 5e-06, 'batch_size': 16, 'epoch': 18} Best MSE: 0.01036276388913393
+Testing: 16 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1759553849697113
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173747752393995
+MSE on Validation: 0.1516171544790268
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.149948992899486
+MSE on Validation: 0.10727466642856598
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.10608910343476705
+MSE on Validation: 0.05914422124624252
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.06368652092558998
+MSE on Validation: 0.027140561491250992
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.032866238217268674
+MSE on Validation: 0.014496730640530586
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.02337000146508217
+MSE on Validation: 0.011825869791209698
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.02370480607662882
+MSE on Validation: 0.012305052950978279
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.024225886245923384
+MSE on Validation: 0.0129364849999547
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.024465333869946853
+MSE on Validation: 0.013237683102488518
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.02504489284807018
+MSE on Validation: 0.0131952790543437
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.026053835770913532
+MSE on Validation: 0.012869633734226227
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.02559729971523796
+MSE on Validation: 0.012132695876061916
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.0245181328084852
+MSE on Validation: 0.01106564886868
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.024409888445266655
+MSE on Validation: 0.010512950830161572
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.022748061854924475
+MSE on Validation: 0.011810405179858208
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.021775553402091776
+MSE on Validation: 0.013140058144927025
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.022975107921021327
+MSE on Validation: 0.012742381542921066
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.0217523690579193
+MSE on Validation: 0.011529517360031605
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.021758273376950195
+MSE on Validation: 0.010850990191102028
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 17 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1742208479850922
+MSE on Validation: 0.17435678839683533
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17390731806462667
+MSE on Validation: 0.16960178315639496
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.16841357412203303
+MSE on Validation: 0.15891121327877045
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.15652587306949328
+MSE on Validation: 0.14236260950565338
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.1403697019899791
+MSE on Validation: 0.12118633091449738
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.12319830411447669
+MSE on Validation: 0.09754371643066406
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.09901223310603285
+MSE on Validation: 0.07418667525053024
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.07623233769159272
+MSE on Validation: 0.05356546863913536
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.057354710433843
+MSE on Validation: 0.03730962425470352
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.040954581444274704
+MSE on Validation: 0.025929536670446396
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.03150426926759054
+MSE on Validation: 0.01878432370722294
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.02630392301230217
+MSE on Validation: 0.014761638827621937
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.024670901554548798
+MSE on Validation: 0.01276468951255083
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.023385804638547718
+MSE on Validation: 0.012008864432573318
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.024095779464949132
+MSE on Validation: 0.011928362771868706
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.023753731085409253
+MSE on Validation: 0.012108228169381618
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.02426271318383339
+MSE on Validation: 0.012328612618148327
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.02462776248202712
+MSE on Validation: 0.012489966116845608
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02503380782788022
+MSE on Validation: 0.01255669817328453
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.02577897739587879
+MSE on Validation: 0.012522970326244831
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 18 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.17917580405871072
+MSE on Validation: 0.17435689270496368
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17467107761789252
+MSE on Validation: 0.16486786305904388
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.16542387505372366
+MSE on Validation: 0.14425921440124512
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.14668383835642426
+MSE on Validation: 0.1146290972828865
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.11326577569599505
+MSE on Validation: 0.08167950063943863
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.08241099919433947
+MSE on Validation: 0.052331097424030304
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.0535957678048699
+MSE on Validation: 0.0313093326985836
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.03886819237636195
+MSE on Validation: 0.019228583201766014
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.028016387105539994
+MSE on Validation: 0.013678384013473988
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.022628295235335827
+MSE on Validation: 0.011921796947717667
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.023511144004900147
+MSE on Validation: 0.011874428950250149
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.023213688870546995
+MSE on Validation: 0.012265999801456928
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.023916723741287435
+MSE on Validation: 0.012586415745317936
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.025012236243734758
+MSE on Validation: 0.012752873823046684
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.030568788929721685
+MSE on Validation: 0.01273328997194767
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.0250269979307497
+MSE on Validation: 0.012550139799714088
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.024947937759053376
+MSE on Validation: 0.012193761765956879
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.02481462243789186
+MSE on Validation: 0.011651473119854927
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.023712990801195027
+MSE on Validation: 0.011013736017048359
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.02285485967338361
+MSE on Validation: 0.01045544259250164
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 19 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1762586725609643
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173971349639552
+MSE on Validation: 0.15583443641662598
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.1609557100704738
+MSE on Validation: 0.11846299469470978
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.11793171188661031
+MSE on Validation: 0.0739549994468689
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.0727110036781856
+MSE on Validation: 0.03862747177481651
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.043378278080906184
+MSE on Validation: 0.019809402525424957
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.025916059368423054
+MSE on Validation: 0.013011731207370758
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.023167273495346308
+MSE on Validation: 0.011868837289512157
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.022351030260324478
+MSE on Validation: 0.012487385421991348
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.0231918708554336
+MSE on Validation: 0.013011481612920761
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.027684393555058966
+MSE on Validation: 0.013190073892474174
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.024644561299023086
+MSE on Validation: 0.013111651875078678
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.02480231155641377
+MSE on Validation: 0.012739893049001694
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.02497782581485808
+MSE on Validation: 0.012027141638100147
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.03597574208730033
+MSE on Validation: 0.010901257395744324
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.022028439037967473
+MSE on Validation: 0.010461045429110527
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.020697239620078887
+MSE on Validation: 0.011926035396754742
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.021551440469920635
+MSE on Validation: 0.013487168587744236
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02354321861639619
+MSE on Validation: 0.012336191721260548
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.021861435313309942
+MSE on Validation: 0.011039036326110363
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 20 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1759553849697113
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173747752393995
+MSE on Validation: 0.13900162279605865
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.13797803861754282
+MSE on Validation: 0.07869590818881989
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.07919761538505554
+MSE on Validation: 0.031715117394924164
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.03844594795789037
+MSE on Validation: 0.014195725321769714
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.022877612417297705
+MSE on Validation: 0.011833643540740013
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.02358506274010454
+MSE on Validation: 0.012723129242658615
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.025806249252387455
+MSE on Validation: 0.013322443701326847
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.02585868683776685
+MSE on Validation: 0.01346630696207285
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.025411548359053477
+MSE on Validation: 0.013143973425030708
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.025101166551134417
+MSE on Validation: 0.012158974073827267
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.02527159026690892
+MSE on Validation: 0.01084040105342865
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.02310524894190686
+MSE on Validation: 0.011149904690682888
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.0218744166860623
+MSE on Validation: 0.013360231183469296
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.023655390366911888
+MSE on Validation: 0.012870017439126968
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.02308787325663226
+MSE on Validation: 0.011247998103499413
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.02156837098300457
+MSE on Validation: 0.010803554207086563
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.022453334448593005
+MSE on Validation: 0.010897323489189148
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02159031473898462
+MSE on Validation: 0.010807751677930355
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.022122808998184546
+MSE on Validation: 0.01080221589654684
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 21 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1742208479850922
+MSE on Validation: 0.17435678839683533
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17390731806462667
+MSE on Validation: 0.16844359040260315
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.16728590822444772
+MSE on Validation: 0.15521180629730225
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.15308522510359873
+MSE on Validation: 0.1350756138563156
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.13352574499429398
+MSE on Validation: 0.11014770716428757
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.11246429700052964
+MSE on Validation: 0.08368973433971405
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.08574902392783255
+MSE on Validation: 0.05937153846025467
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.06216513495540844
+MSE on Validation: 0.03995339944958687
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.04497877842272228
+MSE on Validation: 0.02650245651602745
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.03174308024979425
+MSE on Validation: 0.018477262929081917
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.025847703842270486
+MSE on Validation: 0.014259896241128445
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.02317847959908112
+MSE on Validation: 0.012420066632330418
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.023523284618760337
+MSE on Validation: 0.011899116449058056
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.02344368897237868
+MSE on Validation: 0.01200496219098568
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.025171180253514565
+MSE on Validation: 0.012281941249966621
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.02474182882381357
+MSE on Validation: 0.012507401406764984
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.0250867623434938
+MSE on Validation: 0.012609660625457764
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.02535752942544004
+MSE on Validation: 0.01259527076035738
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.025437160115030083
+MSE on Validation: 0.01246348861604929
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.02582079094158099
+MSE on Validation: 0.01220705360174179
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 22 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.17917580405871072
+MSE on Validation: 0.17435689270496368
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17467107761789252
+MSE on Validation: 0.16256612539291382
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.1632482550210423
+MSE on Validation: 0.13735145330429077
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.14008062967547663
+MSE on Validation: 0.10262893885374069
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.1019377197932314
+MSE on Validation: 0.06690116226673126
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.06859643315827404
+MSE on Validation: 0.03888343647122383
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.04169715054471184
+MSE on Validation: 0.022143151611089706
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.03063949601103862
+MSE on Validation: 0.014458321034908295
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.02427519399120852
+MSE on Validation: 0.01198955811560154
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.02210161741822958
+MSE on Validation: 0.011881968937814236
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.02467534645391559
+MSE on Validation: 0.012320706620812416
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.02424618827730969
+MSE on Validation: 0.012673678807914257
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.024864041020110663
+MSE on Validation: 0.012849475257098675
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.025487657239729608
+MSE on Validation: 0.012832741253077984
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.030867692807482347
+MSE on Validation: 0.012565991841256618
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.024942266659949114
+MSE on Validation: 0.012074696831405163
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.02452157843961484
+MSE on Validation: 0.011410714127123356
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.02386572033477326
+MSE on Validation: 0.01070497464388609
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02248599165533152
+MSE on Validation: 0.010370936244726181
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.021476595369340094
+MSE on Validation: 0.010960405692458153
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 23 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1762586725609643
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173971349639552
+MSE on Validation: 0.15141965448856354
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.15672902443579265
+MSE on Validation: 0.10704290866851807
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.10748563972967011
+MSE on Validation: 0.05934333801269531
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.059274958446621895
+MSE on Validation: 0.02778574451804161
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.03360638049032007
+MSE on Validation: 0.014858467504382133
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.02274043532088399
+MSE on Validation: 0.011887334287166595
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.02284921852073499
+MSE on Validation: 0.01232395600527525
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.02332635814257498
+MSE on Validation: 0.013003593310713768
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.024084163156138465
+MSE on Validation: 0.013299640268087387
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.02829864913032257
+MSE on Validation: 0.013209031894803047
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.024807861266059
+MSE on Validation: 0.012804916128516197
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.024526261957362294
+MSE on Validation: 0.011971592903137207
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.024051158788747022
+MSE on Validation: 0.010815458372235298
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.03335693446985845
+MSE on Validation: 0.010850680992007256
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.021078789606690407
+MSE on Validation: 0.013327445834875107
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.0218166107577937
+MSE on Validation: 0.013633894734084606
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.02210021105461887
+MSE on Validation: 0.01190926879644394
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.022283545163060938
+MSE on Validation: 0.010775353759527206
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.02189158578403294
+MSE on Validation: 0.010865193791687489
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 24 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1759553849697113
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173747752393995
+MSE on Validation: 0.13109298050403595
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.1304628529718944
+MSE on Validation: 0.0639653131365776
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.06549747022134918
+MSE on Validation: 0.022601349279284477
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.030554503202438354
+MSE on Validation: 0.012141324579715729
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.02230644878000021
+MSE on Validation: 0.012321597896516323
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.02481976603823049
+MSE on Validation: 0.01321848388761282
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.026612584878291403
+MSE on Validation: 0.01355309784412384
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.026252451884959425
+MSE on Validation: 0.01338151190429926
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.02541769701721413
+MSE on Validation: 0.012500694021582603
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.024518383334257772
+MSE on Validation: 0.010988661088049412
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.02400939485856465
+MSE on Validation: 0.011222440749406815
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.02229057704763753
+MSE on Validation: 0.012902194634079933
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.02228381165436336
+MSE on Validation: 0.012182556092739105
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.023169922775455883
+MSE on Validation: 0.011081403121352196
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.022428466273205622
+MSE on Validation: 0.010821552947163582
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.021560723627252237
+MSE on Validation: 0.010801293887197971
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.022452506103685925
+MSE on Validation: 0.010753967799246311
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02105226055053728
+MSE on Validation: 0.010912778787314892
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.02149615197309426
+MSE on Validation: 0.011321444064378738
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 25 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1742208479850922
+MSE on Validation: 0.17435678839683533
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17390731806462667
+MSE on Validation: 0.15148912370204926
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.15103837172940093
+MSE on Validation: 0.10708016157150269
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.10830719951751097
+MSE on Validation: 0.058966562151908875
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.06208194544503711
+MSE on Validation: 0.027183614671230316
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.03319033265184119
+MSE on Validation: 0.014525561593472958
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.024082836449005694
+MSE on Validation: 0.011825228109955788
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.022878566297772778
+MSE on Validation: 0.012292372062802315
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.024731862656376762
+MSE on Validation: 0.01288281287997961
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.025805706114350062
+MSE on Validation: 0.013123336248099804
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.026712294750328543
+MSE on Validation: 0.012971548363566399
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.026121119560041237
+MSE on Validation: 0.012446989305317402
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.025552519383502
+MSE on Validation: 0.01150412019342184
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.024043665862782806
+MSE on Validation: 0.010518155060708523
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.024116131534167338
+MSE on Validation: 0.011201760731637478
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.022389115629506844
+MSE on Validation: 0.013284548185765743
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.023157189327801735
+MSE on Validation: 0.013171453028917313
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.022765776985939942
+MSE on Validation: 0.011407947167754173
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02241865465558081
+MSE on Validation: 0.01069987565279007
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.02293517674047078
+MSE on Validation: 0.010858471505343914
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 26 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.17917580405871072
+MSE on Validation: 0.17435689270496368
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17467107761789252
+MSE on Validation: 0.1305949091911316
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.13287555067627518
+MSE on Validation: 0.06327655166387558
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.06878375289616762
+MSE on Validation: 0.021913845092058182
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.029109834900332823
+MSE on Validation: 0.012020914815366268
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.022793326302672976
+MSE on Validation: 0.01224635448306799
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.02422530385579362
+MSE on Validation: 0.013076214119791985
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.02594570174847764
+MSE on Validation: 0.013324855826795101
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.026158631567981233
+MSE on Validation: 0.012917740270495415
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.025513849712162348
+MSE on Validation: 0.011630402877926826
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.025634950664998206
+MSE on Validation: 0.010624595917761326
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.02229312681420534
+MSE on Validation: 0.012566749006509781
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.022528393254442898
+MSE on Validation: 0.012847759760916233
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.022617332809777173
+MSE on Validation: 0.011364046484231949
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.026638585487725557
+MSE on Validation: 0.0108790909871459
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.021887717242525133
+MSE on Validation: 0.010754772461950779
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.021971740880636154
+MSE on Validation: 0.010754109360277653
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.021932370564038003
+MSE on Validation: 0.010841668583452702
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02186159582601653
+MSE on Validation: 0.010926893912255764
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.021247587960075448
+MSE on Validation: 0.010990230366587639
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 27 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1762586725609643
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173971349639552
+MSE on Validation: 0.09650305658578873
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.10356508461492402
+MSE on Validation: 0.025559963658452034
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.0359027860686183
+MSE on Validation: 0.011830163188278675
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.02414909958107663
+MSE on Validation: 0.0128080565482378
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.024256070019743805
+MSE on Validation: 0.013517309911549091
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.026017634430900216
+MSE on Validation: 0.013108457438647747
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.025277808724370385
+MSE on Validation: 0.011572788469493389
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.0237185099394992
+MSE on Validation: 0.010868115350604057
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.021402668473976
+MSE on Validation: 0.011984406970441341
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.02301531351570572
+MSE on Validation: 0.011888808570802212
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.021746968983539512
+MSE on Validation: 0.010878392495214939
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.021265571903703467
+MSE on Validation: 0.010736240074038506
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.021431381614612683
+MSE on Validation: 0.010667659342288971
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.03127638257241675
+MSE on Validation: 0.011599108576774597
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.021610463902886425
+MSE on Validation: 0.012073365971446037
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.021679142290460213
+MSE on Validation: 0.011322176083922386
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.021413490009893264
+MSE on Validation: 0.010710322298109531
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.021359740556882962
+MSE on Validation: 0.010469624772667885
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.021747461154258678
+MSE on Validation: 0.010435095988214016
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 28 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1759553849697113
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173747752393995
+MSE on Validation: 0.05275730416178703
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.05616910170231547
+MSE on Validation: 0.011905215680599213
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.02348873923931803
+MSE on Validation: 0.013194458559155464
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.0269417337008885
+MSE on Validation: 0.013750522397458553
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.02703615983149835
+MSE on Validation: 0.012598788365721703
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.026375843478100642
+MSE on Validation: 0.010947391390800476
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.023632617933409556
+MSE on Validation: 0.012070843018591404
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.022403706929513385
+MSE on Validation: 0.011107539758086205
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.02134205913171172
+MSE on Validation: 0.010503942146897316
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.021554664109966586
+MSE on Validation: 0.010464165359735489
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.022172276995011737
+MSE on Validation: 0.010496877133846283
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.022261239322168485
+MSE on Validation: 0.010547998361289501
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.02147288274552141
+MSE on Validation: 0.010817636735737324
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.022459803814334527
+MSE on Validation: 0.01110820472240448
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.022744191544396535
+MSE on Validation: 0.011195222847163677
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.02142232416995934
+MSE on Validation: 0.010605070739984512
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.02210526860186032
+MSE on Validation: 0.010465960949659348
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02282008621841669
+MSE on Validation: 0.01051998045295477
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.021795704029500484
+MSE on Validation: 0.010842753574252129
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 29 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1742208479850922
+MSE on Validation: 0.17435678839683533
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17390731806462667
+MSE on Validation: 0.13577646017074585
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.13599001841162736
+MSE on Validation: 0.07262032479047775
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.07610809971701424
+MSE on Validation: 0.027509700506925583
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.0338415520634713
+MSE on Validation: 0.013148640282452106
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.022904375005724294
+MSE on Validation: 0.011971979402005672
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.0242410283118381
+MSE on Validation: 0.012920248322188854
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.025636890138727875
+MSE on Validation: 0.013341223821043968
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.026529898698977632
+MSE on Validation: 0.013221630826592445
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.026487059341271338
+MSE on Validation: 0.012466264888644218
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.026032031819066208
+MSE on Validation: 0.011061121709644794
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.023968190815791768
+MSE on Validation: 0.010884974151849747
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.022556320184244298
+MSE on Validation: 0.013167387805879116
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.022972400124483514
+MSE on Validation: 0.01273819338530302
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.02400619389911024
+MSE on Validation: 0.011267672292888165
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.022119288899461336
+MSE on Validation: 0.010783305391669273
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.022603565062624665
+MSE on Validation: 0.010780840180814266
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.022501221739353157
+MSE on Validation: 0.010821204632520676
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.022475432169641246
+MSE on Validation: 0.010937018319964409
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.022450051419788373
+MSE on Validation: 0.011051714420318604
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 30 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.17917580405871072
+MSE on Validation: 0.17435689270496368
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17467107761789252
+MSE on Validation: 0.10384880006313324
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.10731979542308384
+MSE on Validation: 0.030505191534757614
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.03840397657067687
+MSE on Validation: 0.012099671177566051
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.023111207289966167
+MSE on Validation: 0.012494661845266819
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.02493995129070417
+MSE on Validation: 0.013441198505461216
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.026421552125140333
+MSE on Validation: 0.013428311794996262
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.026564272537749883
+MSE on Validation: 0.01225771103054285
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.025122447814619926
+MSE on Validation: 0.010725460015237331
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.022900116871352547
+MSE on Validation: 0.012037047185003757
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.023037651683100395
+MSE on Validation: 0.012508125975728035
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.022474512216393596
+MSE on Validation: 0.01118618343025446
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.021769225731043628
+MSE on Validation: 0.010842044837772846
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.022120127902814635
+MSE on Validation: 0.010792955756187439
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.027119860639450728
+MSE on Validation: 0.01071429904550314
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.021893630821809725
+MSE on Validation: 0.010857080109417439
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.021791946091171768
+MSE on Validation: 0.01097819022834301
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.021825067405761393
+MSE on Validation: 0.010940026491880417
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02195813599973917
+MSE on Validation: 0.010760011151432991
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.02146985633643689
+MSE on Validation: 0.010635162703692913
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 31 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1762586725609643
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173971349639552
+MSE on Validation: 0.061313237994909286
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.06863648683897086
+MSE on Validation: 0.012693672440946102
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.029101401401151503
+MSE on Validation: 0.012729416601359844
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.027504248494681503
+MSE on Validation: 0.01348197367042303
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.025406743250122026
+MSE on Validation: 0.012703156098723412
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.025225065049848387
+MSE on Validation: 0.010895345360040665
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.02253428364305624
+MSE on Validation: 0.011822766624391079
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.02256811410188675
+MSE on Validation: 0.01108783483505249
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.021172776086522
+MSE on Validation: 0.010649485513567924
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.02372152842248657
+MSE on Validation: 0.010583062656223774
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.021556278624172722
+MSE on Validation: 0.01060529612004757
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.021387891594453583
+MSE on Validation: 0.010614038445055485
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.021369782841897438
+MSE on Validation: 0.010590248741209507
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.0314164972265384
+MSE on Validation: 0.01105924416333437
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.021407312380948236
+MSE on Validation: 0.011280175298452377
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.02155439229682088
+MSE on Validation: 0.01089082844555378
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.021424716970484172
+MSE on Validation: 0.010602716356515884
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02144445219476308
+MSE on Validation: 0.010597349144518375
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.022217222639093443
+MSE on Validation: 0.3854193091392517
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 32 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1759553849697113
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173747752393995
+MSE on Validation: 0.025320453569293022
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.03122947152171816
+MSE on Validation: 0.012892983853816986
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.026717220566102436
+MSE on Validation: 0.01454332284629345
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.029112028224127635
+MSE on Validation: 0.01439369935542345
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.02776465831058366
+MSE on Validation: 0.012322726659476757
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.025625146260218962
+MSE on Validation: 0.01094831433147192
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.02277999318071774
+MSE on Validation: 0.011036195792257786
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.02185761383069413
+MSE on Validation: 0.010646020993590355
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.021420772586550032
+MSE on Validation: 0.010547760874032974
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.021423306183091233
+MSE on Validation: 0.010584427043795586
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.021865892623152052
+MSE on Validation: 0.010748733766376972
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.02183614657925708
+MSE on Validation: 0.0111852353438735
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.021298004846487726
+MSE on Validation: 0.01099381037056446
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.022480460948177745
+MSE on Validation: 0.013321353122591972
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.022852018741624697
+MSE on Validation: 0.011065923608839512
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.022134600606347834
+MSE on Validation: 0.011608134023845196
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.02205796805875642
+MSE on Validation: 0.01682737097144127
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02287939004600048
+MSE on Validation: 0.010966407135128975
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.022826196226690496
+MSE on Validation: 0.011221255175769329
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 33 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1742208479850922
+MSE on Validation: 0.17435678839683533
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17390731806462667
+MSE on Validation: 0.1260390728712082
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.12666078077031756
+MSE on Validation: 0.056156959384679794
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.060809663057608425
+MSE on Validation: 0.01891879364848137
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.02684011666174486
+MSE on Validation: 0.011813504621386528
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.023085900338559923
+MSE on Validation: 0.012674257159233093
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.02547860590692715
+MSE on Validation: 0.01340546365827322
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.026434013765126264
+MSE on Validation: 0.013433892279863358
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.026738600840820616
+MSE on Validation: 0.012727745808660984
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.026023176165115316
+MSE on Validation: 0.011197597719728947
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.024281463478164712
+MSE on Validation: 0.011040283367037773
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.022488665958110877
+MSE on Validation: 0.013194987550377846
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.022986823209684412
+MSE on Validation: 0.012285655364394188
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.022624625499307546
+MSE on Validation: 0.010977358557283878
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.02369783902409012
+MSE on Validation: 0.010811252519488335
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.022148093595257344
+MSE on Validation: 0.010792733170092106
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.022615650974055927
+MSE on Validation: 0.010789007879793644
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.02213282949502035
+MSE on Validation: 0.010836769826710224
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02224471830798067
+MSE on Validation: 0.010888287797570229
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.022290742222465715
+MSE on Validation: 0.010841183364391327
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 34 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.17917580405871072
+MSE on Validation: 0.17435689270496368
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17467107761789252
+MSE on Validation: 0.08891239017248154
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.09295525470817531
+MSE on Validation: 0.020907286554574966
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.030376957832939096
+MSE on Validation: 0.01177335437387228
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.023962324640403192
+MSE on Validation: 0.013139828108251095
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.025923246330219425
+MSE on Validation: 0.013663480058312416
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.02682262472808361
+MSE on Validation: 0.012872397899627686
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.026017182806282544
+MSE on Validation: 0.010930467396974564
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.023214586355068064
+MSE on Validation: 0.011983883567154408
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.02263761587716915
+MSE on Validation: 0.012033030390739441
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.023040257877221814
+MSE on Validation: 0.011147134937345982
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.02178165518368284
+MSE on Validation: 0.010791264474391937
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.02220258302771038
+MSE on Validation: 0.010710511356592178
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.022056954429933318
+MSE on Validation: 0.010633070953190327
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.026644860187338457
+MSE on Validation: 0.01081742811948061
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.021904648160906853
+MSE on Validation: 0.01098068431019783
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.02200421703013557
+MSE on Validation: 0.010927007533609867
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.02190817112999934
+MSE on Validation: 0.010823633521795273
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.021984567063757114
+MSE on Validation: 0.010699923150241375
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.02157885151811772
+MSE on Validation: 0.010685544461011887
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 35 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1762586725609643
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173971349639552
+MSE on Validation: 0.046296972781419754
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.05355900978403432
+MSE on Validation: 0.011688756756484509
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.030562093015760183
+MSE on Validation: 0.013300096616148949
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.028521145195034996
+MSE on Validation: 0.013453075662255287
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.025542690734645084
+MSE on Validation: 0.012029385194182396
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.024300827411934733
+MSE on Validation: 0.01111513376235962
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.02199203155136534
+MSE on Validation: 0.011577103286981583
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.02236945807401623
+MSE on Validation: 0.010769485495984554
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.021140874097389833
+MSE on Validation: 0.010469726286828518
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.023808411272641803
+MSE on Validation: 0.010421739891171455
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.021522574791950837
+MSE on Validation: 0.010431974194943905
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.021520343617469604
+MSE on Validation: 0.010545891709625721
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.02141996326723269
+MSE on Validation: 0.010853048413991928
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.03024100638659937
+MSE on Validation: 0.012975489720702171
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.033921324115778716
+MSE on Validation: 0.013087344355881214
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.025198346968474134
+MSE on Validation: 0.01208206545561552
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.024839615881709114
+MSE on Validation: 0.010333266109228134
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.021614556034494723
+MSE on Validation: 0.013277423568069935
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.023278405956391777
+MSE on Validation: 0.012238659895956516
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+New Best Parameters: {'lr': 9e-05, 'batch_size': 16, 'epoch': 17} Best MSE: 0.010333266109228134
+Testing: 36 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1759553849697113
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173747752393995
+MSE on Validation: 0.018405752256512642
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.025474052211003646
+MSE on Validation: 0.013663198798894882
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.027998763535703932
+MSE on Validation: 0.015040535479784012
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.02985072841069528
+MSE on Validation: 0.014788046479225159
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.028170443871723756
+MSE on Validation: 0.01190259214490652
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.025192809823368276
+MSE on Validation: 0.010793040506541729
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.022547694721392224
+MSE on Validation: 0.011099686846137047
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.021931498976690427
+MSE on Validation: 0.01088633481413126
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.02249236305111221
+MSE on Validation: 0.013278795406222343
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.02606263437441417
+MSE on Validation: 0.011690489016473293
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.02411916266594614
+MSE on Validation: 0.011610765010118484
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.02221571680690561
+MSE on Validation: 0.012504633516073227
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.022298580168613365
+MSE on Validation: 0.010555186308920383
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.023759241215884686
+MSE on Validation: 0.010471906512975693
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.022738507017493248
+MSE on Validation: 0.011068986728787422
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.021609565243124962
+MSE on Validation: 0.01196663361042738
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.022275190002151897
+MSE on Validation: 0.01084083504974842
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02135551268500941
+MSE on Validation: 0.010472113266587257
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.02175068762153387
+MSE on Validation: 0.01048897672444582
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 37 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1742208479850922
+MSE on Validation: 0.17435678839683533
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17390731806462667
+MSE on Validation: 0.12137551605701447
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.12219390926777192
+MSE on Validation: 0.04952086880803108
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.05470582913115339
+MSE on Validation: 0.016449637711048126
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.025068450815764802
+MSE on Validation: 0.01181063149124384
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.023570967794237833
+MSE on Validation: 0.012956907041370869
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.02594326815308722
+MSE on Validation: 0.013532264158129692
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.026646711662870762
+MSE on Validation: 0.013354004360735416
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.026674272523828306
+MSE on Validation: 0.012266316451132298
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.025494635677325347
+MSE on Validation: 0.01069094892591238
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.023175870993104326
+MSE on Validation: 0.012179349549114704
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.02267744635091216
+MSE on Validation: 0.012914162129163742
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.022805059117809782
+MSE on Validation: 0.0113705238327384
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.022187238857852964
+MSE on Validation: 0.010831180959939957
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.02392623665136338
+MSE on Validation: 0.010815218091011047
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.022278849408909115
+MSE on Validation: 0.010800555348396301
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.022404499540878635
+MSE on Validation: 0.010935408063232899
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.022114437864214746
+MSE on Validation: 0.0111924409866333
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02211710112169385
+MSE on Validation: 0.011308708228170872
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.022297180552070715
+MSE on Validation: 0.01133162621408701
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 38 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.17917580405871072
+MSE on Validation: 0.17435689270496368
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.17467107761789252
+MSE on Validation: 0.08224812895059586
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.08653618919628638
+MSE on Validation: 0.01800498180091381
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.028237385192403087
+MSE on Validation: 0.01197739876806736
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.024533829569851083
+MSE on Validation: 0.013362715020775795
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.026249774054762115
+MSE on Validation: 0.013673550449311733
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.02687255831875114
+MSE on Validation: 0.012465568259358406
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.025580496699721726
+MSE on Validation: 0.010799688287079334
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.02253539466161143
+MSE on Validation: 0.01235924195498228
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.02278786873513902
+MSE on Validation: 0.011723358184099197
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.022913492905596893
+MSE on Validation: 0.01092514768242836
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.021747412410116306
+MSE on Validation: 0.010711182840168476
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.022736600011638883
+MSE on Validation: 0.010637977160513401
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.022072803487794265
+MSE on Validation: 0.010558433830738068
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.026772434978435438
+MSE on Validation: 0.01064921636134386
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.0219160757475981
+MSE on Validation: 0.01080701220780611
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.021946502504525362
+MSE on Validation: 0.01089271530508995
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.021918782533180935
+MSE on Validation: 0.01090166810899973
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.021974403825071123
+MSE on Validation: 0.010814893990755081
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.02147243946307787
+MSE on Validation: 0.010788650251924992
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Testing: 39 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1762586725609643
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173971349639552
+MSE on Validation: 0.04064454138278961
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.04788476548024586
+MSE on Validation: 0.01180178951472044
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.03151585327993546
+MSE on Validation: 0.013534624129533768
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.028939610480197837
+MSE on Validation: 0.013515129685401917
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.02570818053624992
+MSE on Validation: 0.012111126445233822
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.02444256396432008
+MSE on Validation: 0.011103133670985699
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.021972053684294224
+MSE on Validation: 0.011289762333035469
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.02221925277262926
+MSE on Validation: 0.010590684600174427
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.021439348181177462
+MSE on Validation: 0.010358992964029312
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.027264159455496286
+MSE on Validation: 0.010458248667418957
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.021367030068566755
+MSE on Validation: 0.01044635009020567
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.021658128418494016
+MSE on Validation: 0.010525128804147243
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.022944107285833786
+MSE on Validation: 0.01064126007258892
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.03323692831742976
+MSE on Validation: 0.010587915778160095
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.026941226529223577
+MSE on Validation: 0.010419521480798721
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.021205001111541475
+MSE on Validation: 0.19850961863994598
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.2766664017524038
+MSE on Validation: 0.01041167601943016
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.02160386265521603
+MSE on Validation: 0.01033046469092369
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.02242054494230875
+MSE on Validation: 0.01074164267629385
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+New Best Parameters: {'lr': 0.0001, 'batch_size': 16, 'epoch': 18} Best MSE: 0.01033046469092369
+Testing: 40 of 40
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch:  0  Average train loss: 0.1759553849697113
+MSE on Validation: 0.1743566244840622
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  1  Average train loss: 0.173747752393995
+MSE on Validation: 0.01638021133840084
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  2  Average train loss: 0.023933749379856244
+MSE on Validation: 0.01389347668737173
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  3  Average train loss: 0.02837244767163481
+MSE on Validation: 0.01513099018484354
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548594787716866
+Epoch:  4  Average train loss: 0.029973358048924377
+MSE on Validation: 0.014283302240073681
+Avg MSE on Validation: 0.011555410921573639
+One MSE on Validation: 0.018548591062426567
+Epoch:  5  Average train loss: 0.027458612940141132
+MSE on Validation: 0.010968051850795746
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  6  Average train loss: 0.023606399739427224
+MSE on Validation: 0.12409257143735886
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  7  Average train loss: 0.0784278426851545
+MSE on Validation: 0.01446479931473732
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  8  Average train loss: 0.027707816367702826
+MSE on Validation: 0.013831677846610546
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  9  Average train loss: 0.026610141886132106
+MSE on Validation: 0.011350700631737709
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  10  Average train loss: 0.023878234505121197
+MSE on Validation: 0.011159422807395458
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  11  Average train loss: 0.02137072424271277
+MSE on Validation: 0.01504572480916977
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  12  Average train loss: 0.023890917721603597
+MSE on Validation: 0.010615545324981213
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  13  Average train loss: 0.022331689883555685
+MSE on Validation: 0.011105223558843136
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  14  Average train loss: 0.02513621428183147
+MSE on Validation: 0.010513843037188053
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  15  Average train loss: 0.0231298797630838
+MSE on Validation: 0.011218247003853321
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  16  Average train loss: 0.02175839724285262
+MSE on Validation: 0.01359831914305687
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  17  Average train loss: 0.02271979222340243
+MSE on Validation: 0.01235678605735302
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548592925071716
+Epoch:  18  Average train loss: 0.021764086027230536
+MSE on Validation: 0.010711906477808952
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+Epoch:  19  Average train loss: 0.021552822552621365
+MSE on Validation: 0.01045056153088808
+Avg MSE on Validation: 0.01155540905892849
+One MSE on Validation: 0.018548591062426567
+
+Ideal {'lr': 0.0001, 'batch_size': 16, 'epoch': 18} 0.01033046469092369
+/srv/share5/emendes3/miniconda3/envs/bertenv3.8.1/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(

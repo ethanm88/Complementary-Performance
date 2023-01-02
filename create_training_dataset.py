@@ -3,10 +3,10 @@ import json
 import pandas as pd
 import numpy as np
 
-def get_experiment_data(filename, data_type='beer'):
+def get_experiment_data(filename, data_type='beer', condition='Conf.+Single'):
     df = pd.read_csv(filename)
     df = df[df['task'] == data_type]
-    df = df[df['condition'] =='Conf.+Single']
+    df = df[df['condition'] == condition]
     print(len(df))
     selected_columns = ['task', 'condition', 'questionId', 'time', 'choice', 'y', 'pred']
     examples = pd.DataFrame()
@@ -24,19 +24,30 @@ def get_text_and_saliency(filename):
     df['questionId'] = np.arange(len(df))
     return df
 
-def combine_data_and_text(experiment_data, text):
+def combine_data_and_text(experiment_data, text, condition):
+    '''
+    merge the text data and the annotation results
+    include and identifier to differentiate between the different 
+    conditions
+    '''
+    if condition == 'Human':
+        identifier = 'H'
+    elif condition == "Conf.+Adaptive (Expert)":
+        identifier = '0EA'
+    else:
+        identifier = condition[condition.find('+') + 1]
     merged = text.merge(experiment_data, left_on='questionId', right_on='questionId')
-    print(len(merged))
+    merged['testid_modified'] = merged['testid'].astype(str) + '_' + identifier
+    
     return merged
 
-        
-experiment_data_beer = get_experiment_data("experiment-data/decision-result-filter.csv", "beer")
-text_beer = get_text_and_saliency("task-examples/task-sentiment-beer.json")
-merged_data_beer = combine_data_and_text(experiment_data_beer, text_beer)
+all_data = []
+for dataset_name in ["beer", "amzbook"]:
+    for condition in ["Conf.+Single", "Conf.+Double", "Conf.+Adaptive", "Human", "Conf.+Adaptive (Expert)"]:
+        experiment_data = get_experiment_data("experiment-data/decision-result-filter.csv", dataset_name, condition)
+        text = get_text_and_saliency(f'task-examples/task-sentiment-{dataset_name}.json')
+        merged_data = combine_data_and_text(experiment_data, text, condition)
+        all_data.append(merged_data)
 
-experiment_data_amzbook = get_experiment_data("experiment-data/decision-result-filter.csv", "amzbook")
-text_amzbook = get_text_and_saliency("task-examples/task-sentiment-amzbook.json")
-merged_data_amzbook = combine_data_and_text(experiment_data_amzbook, text_amzbook)
-
-merged_data = pd.concat([merged_data_amzbook, merged_data_beer], axis=0)
-merged_data.to_csv("examples.csv", index=False)
+merged_data = pd.concat(all_data, axis=0)
+merged_data.to_csv("full_examples.csv", index=False)
